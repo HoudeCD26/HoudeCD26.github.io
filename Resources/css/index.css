@@ -6,7 +6,7 @@ body{
 }
 @media only screen and (max-width:1440px){
   .nav-bar li {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   #rendez-vous{
   font-size: 0.5rem;
