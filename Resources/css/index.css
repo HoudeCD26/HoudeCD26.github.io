@@ -381,6 +381,7 @@ text-align: center;
   border-radius: 33px;
   text-align: right;
   transition: all 0.6s ease;
+  -webkit-appearance: none;
 }
 
 .button-soumission:hover {
