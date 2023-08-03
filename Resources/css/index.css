@@ -1,0 +1,599 @@
+html{
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  margin:0;
+}
+@media only screen and (max-width:1440px){
+  .nav-bar li {
+    font-size: 0.8rem;
+  }
+  #rendez-vous{
+  font-size: 0.5rem;
+  }
+  .services{
+    height:10rem;
+  }
+
+}
+h2{
+  margin: 0.725rem 0;
+}
+h4,h5{
+  margin:0;
+}
+
+p{
+  margin:0.5rem 0;
+}
+
+.main-grid{
+  display: grid;
+  width:100%;
+    position: relative;
+    margin: auto;
+    grid-template-areas: " nav nav nav nav nav nav"
+                         " banner banner banner banner banner banner"
+                         " services services services services services services"
+                         " articles articles articles articles articles articles"
+                         "footer footer footer footer footer footer";
+ grid-template-columns: repeat(6, 1fr);
+ grid-template-rows: 10vh 90vh 70rem 30rem 30rem;                    
+}
+a{
+  text-decoration:none;
+}
+.nav{
+  padding:0 5%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: nav;
+  position:sticky;
+  top:0px;
+ /* background-color: #F6F4EB;
+ */ 
+ background-color: white;
+ z-index:100;
+}
+.nav-bar{
+  width:50%;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-bar li{
+display: inline-block;
+}
+
+.nav-bar li a{
+  color:#232655;
+  font-family: Helvetica, arial, sans-serif;
+}
+#nav-social-icon-bar a img{
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+#logo{
+  
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#logo img{
+  display: inline-block;
+  width:fit-content; 
+  height: 2.5rem;
+  padding-right: 0.25rem;
+}
+.logotext{
+  padding-right:2rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-nom{
+  font-size: 1rem;
+  font-weight: bold;
+  color:#232655;
+}
+.logo-slogan{
+  font-size: 0.75rem;
+  
+}
+#rendez-vous {
+  position: relative;
+  font-size: 0.825rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5em 0.5em;
+  display: inline-block;
+  border-radius: 0em;
+  transition: all .2s;
+  border: none;
+  font-family: inherit;
+  font-weight: bold;
+  color: white;
+  background-color: #232655;
+ }
+ 
+ #rendez-vous:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(158, 158, 158, 0.2);
+ }
+ 
+ #rendez-vous:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+ }
+ 
+ #rendez-vous::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+ }
+ 
+ #rendez-vous::after {
+  background-color: #3654ff;
+ }
+ #banner{
+  grid-area: banner;
+  /*background: linear-gradient(rgba(246,244,235,1) 0%, rgba(246,244,235,1) 20%, rgba(255,255,255,1) 100%);}
+*/
+ }
+/* Code CSS For main Banner */
+.banner-main{
+  margin: 0 5%;
+  width: 90%;
+  height: 100%;
+  display:flex;
+  justify-content:baseline;
+
+}
+/*left side of the banner */
+#banner-left{
+display:inline-block;
+width: 50%;
+background-image: url("./images/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg");
+background-size:cover; 
+
+/*banner Profile picture section*/
+}
+/* Right side of the Banner*/
+#banner-right{
+  background-color: #DFD3C3;
+  width:50%;
+  height:100%;
+  
+}
+.banner-right-texte{
+  width:80%;
+  height: 80%;
+  margin:10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.banner-slogan{
+ margin:0;
+  color: #232655;
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: right;
+
+}
+#banner-description{
+ margin: 4rem 0 4rem 0;
+ height:fit-content;
+ text-align:justify;
+ line-height: 1.6;
+ color: black;
+ font-size: 1.125rem;
+ font-family:  Helvetica, arial, sans-serif;
+}
+#button-banner-2{
+  margin-top:1rem;
+}
+.button-rendez-vous{
+ 
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  overflow: hidden;
+  background: #232655;
+  color: white;
+ }
+.button-rendez-vous:hover{
+  background-color: #3654ff;
+}
+
+.button-savoir-plus {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  overflow: hidden;
+  background: ghostwhite;
+  color: #232655;
+ }
+ .button-savoir-plus:hover{
+  background: #3654ff;
+  color: ghostwhite;
+ }
+ 
+ 
+ 
+ 
+/*****************************************/
+/* services offered section */
+#container-services{
+  
+  margin: 0rem 5%;
+  width: 90%;
+  height:100%;
+  grid-area: services;
+  background-color:#fff;
+}
+#services-top{
+  margin: 2rem;
+  height: 10%;
+  width:100%;
+  display:flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+#services-box{
+  width: 40%;
+  height: 4rem;
+  background-color: #232655;
+  box-shadow:  -0.75rem 0.75rem 0px #DFD3C3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+#services-bottom{
+  height:80%;
+  width:100%;
+}
+#services-principale{
+  margin-top: 0rem;
+  height:40%;
+  width:100%;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center;
+}
+#titre-services{
+  display: inline-block;
+  width: fit-content;
+  margin: 0 auto;
+  font-size:2rem;
+  color:white;
+}
+.services{
+
+  margin:0;
+  width: 22%;
+  height: 65%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow:  21px 10px 41px #cfcfcf
+}
+.epargne-logo{
+  width:25%;
+}
+.assurance-logo{
+  width:25%;
+}
+.services a{
+  width:100%;
+}
+#economiser{
+  font-weight: bolder;
+  font-size:2.1rem;
+  color:#3654ff;
+}
+#soumission{
+  margin:1rem auto 1.5rem auto;
+  height: 50%;
+  width: 70%;
+  display:flex;
+  box-shadow:  21px 21px 41px #cfcfcf;
+  z-index:10;
+}
+#soumission-left{
+  width:50%;  
+}
+.soumission-left-text{
+  margin :5%;
+  width: 90%;
+  height:90%;
+  display: flex;
+  flex-direction: column;
+justify-content: space-around;
+align-items: center;
+text-align: center;
+}
+.soumission-left-text h3{
+  margin:0.2rem 0 1rem 0;
+  padding:0 5rem;
+}
+.soumission-left-text h1{
+  margin-top: 0;
+  color:#232655;
+  
+}
+#soumission-right{
+  background-image: url("./images/pexels-lisa-fotios-1666467.jpg");
+  background-size: cover;
+  width:50%;
+  height:100%;
+}
+.button-soumission {
+  background-color: #232655;
+  color: #fff;
+  width: 12.5rem;
+  height: 2.9em;
+  border: #232655 0.2em solid;
+  border-radius: 33px;
+  text-align: right;
+  transition: all 0.6s ease;
+}
+
+.button-soumission:hover {
+  background-color: #3654ff;
+  border: #3654ff 0.2em solid;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-soumission svg {
+  width: 1.6em;
+  margin: -0.2em -0.2em 2em;
+  position: absolute;
+  display: flex;
+  transition: all 0.6s ease;
+}
+
+.button-soumission:hover svg {
+  transform: translateX(5px);
+}
+
+.text {
+  margin: 0 1.5em
+}
+.soumission-images-bar{
+  width:90%;
+  height:20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.soumission-images-bar a{
+  height:100%
+
+}
+/***********************************/
+.articles-container{
+  grid-area: articles;
+  margin: 0;
+  width: 100%;
+  height:100%;
+  background-color: #F9F5F6;
+  
+}
+#articles-bottom{
+  width: 100%;
+  height: 75%; 
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  
+
+}
+.articles{
+  margin:0 2rem;
+  width:35rem;
+  height:15rem;
+  background-color: #fff;
+  display:flex;
+  box-shadow:  -21px 21px 41px #cfcfcf
+}
+.articles-picture{
+  width:45%;
+}
+.articles-text{
+  width:55%;
+}
+
+#first-article{
+  background-image: url("./images/alesia-kazantceva-XLm6-fPwK5Q-unsplash.jpg");
+  background-size: cover;
+}
+#second-article{
+  background-image: url("./images/simple-finance-background-.jpg");
+  background-size: cover;
+}
+#third-article{
+  background-image: url("./images/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg");
+  background-size: cover;
+}
+
+#articles-top{
+  height:25%;
+  width:95%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+#articles-box{
+width:40%;
+  height:4rem;
+  background-color: #232655;
+  box-shadow:  0.75rem 0.75rem 0px #DFD3C3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#titre-articles{
+  color: white;
+  font-size:2rem;
+}
+article{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding:1rem;
+}
+.main-text{
+  text-align: left;
+}
+#number-of-view-article-1{
+  font-size: 1rem;
+  padding-right: 0.2rem;
+}
+.social-bar{
+  display: flex;
+  justify-content: space-between;
+}
+.main-text h2{
+  font-size: 1rem;
+}
+.main-text p{
+  font-size: 0.825rem;
+}
+.date p{
+  margin:0;
+  font-size: 0.825rem;
+  color: grey;
+}
+/*******************************************************/
+footer{
+  grid-area:footer;
+}
+#question-box{
+  height:50%;
+  width:100%;
+  background-color: #DFD3C3;
+  display: flex;
+}
+#question-box-left{
+  width:60%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#question-box-left h1{
+  margin: 0;
+}
+#question-box-right{
+  width: 40%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+#reference-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:50%;
+  background-color: #232655;
+}
+#reference-footer p{
+  color:white;
+  font-size: 12px;
+}
+#reference-footer-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 20%;
+  height:100%;
+  margin-left: 30%;
+}
+#reference-nom p{
+  font-weight: bold;
+  color: #232655;
+  margin:0;
+}
+#reference-nom h4,h5{
+  color:white;
+}
+#reference-adresse p{
+  font-size: 12px;
+  color:white;
+  margin:0;
+}
+#reference-adresse{
+  margin-top: 1.5rem;
+}
+#social-icon-bar{
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width:100%;
+
+}
+#social-icon-bar a{
+  margin:0 1rem 0 0;
+  width: 1.5rem;
+}
+#social-icon-bar img{
+  width:100%;
+  height:100%;
+}
+#reference-footer-right{
+  width:30%;
+  margin-right: 20%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#reference-footer-right-text h3{
+  text-align: right;
+  color:white;
+  margin: 0rem 1rem;
+}
