@@ -38,7 +38,7 @@ p{
                          " articles articles articles articles articles articles"
                          "footer footer footer footer footer footer";
  grid-template-columns: repeat(6, 1fr);
- grid-template-rows: 15vh 90vh 70rem 30rem 30rem;                    
+ grid-template-rows: 12vh 90vh 70rem 30rem 30rem;                    
 }
 a{
   text-decoration:none;
