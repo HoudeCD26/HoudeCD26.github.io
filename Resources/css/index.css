@@ -32,13 +32,24 @@ p{
   width:100%;
     position: relative;
     margin: auto;
-    grid-template-areas: " nav nav nav nav nav nav"
-                         " banner banner banner banner banner banner"
-                         " services services services services services services"
-                         " articles articles articles articles articles articles"
-                         "footer footer footer footer footer footer";
- grid-template-columns: repeat(6, 1fr);
- grid-template-rows: 12vh 90vh 70rem 30rem 30rem;                    
+    grid-template-areas: "nav"
+                         "banner"
+                         "services"
+                         "articles"
+                         "footer";
+   grid-template-columns: 100%;
+   grid-template-rows: 12vh 90vh 70rem 30rem 30rem;                    
+}
+.grid-services{
+  display: grid;
+  width:100%;
+    position: relative;
+    margin: auto;
+    grid-template-areas: "nav"
+                         "services"
+                         "footer";
+   grid-template-columns: 100%;
+   grid-template-rows: 12vh 35rem 30rem;                    
 }
 a{
   text-decoration:none;
@@ -51,10 +62,8 @@ a{
   grid-area: nav;
   position:sticky;
   top:0px;
- /* background-color: #F6F4EB;
- */ 
- background-color: white;
- z-index:100;
+  background-color: white;
+  z-index:100;
 }
 .nav-bar{
   width:50%;
@@ -86,9 +95,6 @@ display: inline-block;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#logo a{
-
 }
 #logo-images{
   WIDTH:4rem;
@@ -193,18 +199,18 @@ background-size:cover;
 .banner-slogan{
  margin:0;
   color: #232655;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: 'Poppins', sans-serif;
   text-align: right;
 
 }
-#banner-description{
- margin: 4rem 0 4rem 0;
+.banner-description{
+ margin: 1.5rem 0 1.5rem 0;
  height:fit-content;
  text-align:justify;
  line-height: 1.6;
  color: black;
- font-size: 1.125rem;
+ font-size: 1rem;
  font-family:  Helvetica, arial, sans-serif;
 }
 #button-banner-2{
@@ -597,7 +603,7 @@ footer{
 .background-color{
   width:100%;
   height:100%;
-  opacity: 0.8;
+  opacity: 0.7;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -706,3 +712,56 @@ footer{
 }
 
 /**************************************PAGE SERVICES*****************************/
+
+#services-main-container{
+  grid-area: services;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#services-offert-box{
+  height:20%;
+  width: 100%;
+}
+#services-offert-box h1{
+  text-align:center;
+  width:20rem;
+  padding:0.5rem;
+  background-color: #232655;
+  box-shadow: 0.6rem 0.6rem 0px #DFD3C3;
+  color:white;
+  margin:2rem auto;
+}
+
+#choix-services-box{
+  height:80%;
+  width: 100%;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.choix-services{
+  width:40%;
+  height:60%;
+  box-shadow: 0.6rem 0.6rem 6px #cfcfcf;
+}
+.choix-services h1{
+  
+  background-color: #232655;
+  color: white;
+  padding:0.5rem 1rem 0.5rem 0.5rem;
+}
+
+#choix-epargne{
+  background-image: url("./images/pexels-joslyn-pickens-3833052.jpg");
+  background-size: cover;
+}
+#background-color-epargne{
+  background-color: #F9F5F6;
+  display:flex;
+  justify-content:center;
+  align-items: flex-end;
+}
