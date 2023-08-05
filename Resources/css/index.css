@@ -751,5 +751,59 @@ footer{
 #choix-assurances{
   background-image: url("./images/6291bc4437e08978dc9c0ead_Building\ Insurance.png");
   background-size: cover;
+}
+/**************Contact*************/
 
+.contact-grid{
+  display: grid;
+  width:100%;
+    position: relative;
+    margin: auto;
+    grid-template-areas: "nav"
+                         "contact"
+                         "footer";
+   grid-template-columns: 100%;
+   grid-template-rows: 15vh 30rem 30rem;                    
+}
+
+#contact-container{
+  grid-area: contact;
+}
+#contact-box{
+  width:80%;
+  height:80%;
+  margin: 5%;
+  display:flex;
+}
+#contact-box-right{
+  padding-left:3rem;
+  width:65%;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+#contact-box-form{
+  width:35%;
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+#form-contact{
+  margin:0 auto;
+  width:100%;
+  height:100%;
+  background-color:#F9F5F6;
+  color:#232655;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -0.7rem 0.7rem 6px #cfcfcf;
+
+}
+.form-input-data{
+  margin:0.5rem 0;
 }
