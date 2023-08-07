@@ -1,0 +1,1193 @@
+html{
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  margin:0;
+}
+@media only screen and (max-width:768px){
+  html{
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width:425px){
+  html{
+    font-size: 8px;
+  }
+}
+@media only screen and (max-width:1440px){
+  .nav-bar li {
+    font-size: 0.8rem;
+  }
+  #rendez-vous{
+  font-size: 0.5rem;
+  }
+  .services{
+    height:10rem;
+  }
+
+}
+h2{
+  margin: 0.725rem 0;
+}
+h4,h5{
+  margin:0;
+}
+
+p{
+  margin:0.5rem 0;
+}
+
+.main-grid{
+  display: grid;
+  width:100%;
+    position: relative;
+    margin: auto;
+    grid-template-areas: "nav"
+                         "banner"
+                         "services"
+                         "articles"
+                         "footer";
+   grid-template-columns: 100%;
+   grid-template-rows: 15vh 80vh 70rem 30rem 30rem;                    
+}
+.grid-services{
+  display: grid;
+  width:100%;
+    position: relative;
+    margin: auto;
+    grid-template-areas: "nav"
+                         "services"
+                         "footer";
+   grid-template-columns: 100%;
+   grid-template-rows: 15vh 35rem 30rem;                    
+}
+a{
+  text-decoration:none;
+}
+.nav{
+  padding: 0 7%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: nav;
+  position:sticky;
+  top:0px;
+  background-color: #fff;
+  z-index:100;
+}
+.nav-bar{
+  width:50%;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-bar li{
+display: inline-block;
+}
+
+.nav-bar li a{
+  color:#232655;
+  font-family: Helvetica, arial, sans-serif;
+}
+.dropbtn {
+  color: #232655;
+  background-color: white;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #DFD3C3;}
+#logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#logo-images{
+  WIDTH:4rem;
+}
+
+.logotext{
+  padding-right:1rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-nom{
+  font-size: 1.25rem;
+  font-weight: bold;
+  color:#232655;
+}
+.logo-slogan{
+  font-size: 0.9rem;
+  
+}
+#rendez-vous {
+  position: relative;
+  font-size: 0.825rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5em 0.5em;
+  display: inline-block;
+  border-radius: 0em;
+  transition: all .2s;
+  border: none;
+  font-family: inherit;
+  font-weight: bold;
+  color: white;
+  background-color: #232655;
+ }
+ 
+ #rendez-vous:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(158, 158, 158, 0.2);
+ }
+ 
+ #rendez-vous:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+ }
+ 
+ #rendez-vous::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+ }
+ 
+ #rendez-vous::after {
+  background-color: #3654ff;
+ }
+ #banner{
+  grid-area: banner;
+  /*background: linear-gradient(rgba(246,244,235,1) 0%, rgba(246,244,235,1) 20%, rgba(255,255,255,1) 100%);}
+*/
+ }
+/* Code CSS For main Banner */
+.banner-main{
+  margin: 0 7.5%;
+  width: 85%;
+  height: 100%;
+  display:flex;
+  justify-content:baseline;
+
+}
+/*left side of the banner */
+#banner-left{
+display:inline-block;
+width: 50%;
+background-image: url("./images/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg");
+background-size:cover; 
+
+/*banner Profile picture section*/
+}
+/* Right side of the Banner*/
+#banner-right{
+  background-color: #DFD3C3;
+  width:50%;
+  height:100%;
+  
+}
+.banner-right-texte{
+  width:85%;
+  height: 85%;
+  margin:7.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.banner-slogan{
+ margin:0 0 3rem 0;
+  color: #232655;
+  font-size: 2.1rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+
+}
+.banner-description{
+ margin: 0.2rem 1rem 0.2rem 1rem;
+ height:fit-content;
+ text-align:justify;
+ line-height: 1.6;
+ color: black;
+ font-size: 1.1rem;
+ font-family:  Helvetica, arial, sans-serif;
+}
+#button-banner-2{
+  margin-top:1rem;
+}
+.button-rendez-vous{
+ 
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin: 2rem 0 0 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  overflow: hidden;
+  background: #232655;
+  color: white;
+ }
+.button-rendez-vous:hover{
+  background-color: #3654ff;
+}
+
+.button-savoir-plus {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  overflow: hidden;
+  background: ghostwhite;
+  color: #232655;
+ }
+ .button-savoir-plus:hover{
+  background: #3654ff;
+  color: ghostwhite;
+ }
+ 
+ 
+ 
+ 
+/*****************************************/
+/* services offered section */
+#container-services{
+  
+  margin: 0rem 5%;
+  width: 90%;
+  height:100%;
+  grid-area: services;
+  background-color:#fff;
+}
+#services-top{
+  margin: 2rem;
+  height: 10%;
+  width:100%;
+  display:flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+#services-box{
+  width: 35%;
+  height: 4rem;
+  background-color: #232655;
+  box-shadow:  -0.3rem 0.3rem 3px #DFD3C3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+#services-bottom{
+  height:80%;
+  width:100%;
+}
+#services-principale{
+  margin-top: 0rem;
+  height:22rem;
+  width:100%;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center;
+}
+#titre-services{
+  display: inline-block;
+  width: fit-content;
+  margin: 0 auto;
+  font-size:2rem;
+  color:white;
+}
+.services{
+
+  margin:0;
+  width: 22%;
+  height: 12rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow:  21px 10px 41px #cfcfcf;
+  padding: 0.5rem;
+}
+.epargne-logo{
+  width:25%;
+}
+.assurance-logo{
+  width:25%;
+}
+.services a{
+  width:100%;
+}
+#economiser{
+  font-weight: bolder;
+  font-size:2.1rem;
+  color:#3654ff;
+}
+#soumission{
+  margin:1rem auto 1.5rem auto;
+  height: 50%;
+  width: 70%;
+  display:flex;
+  box-shadow:  21px 21px 41px #cfcfcf;
+  z-index:10;
+}
+#soumission-left{
+  width:50%;  
+}
+.soumission-left-text{
+  margin :5%;
+  width: 90%;
+  height:90%;
+  display: flex;
+  flex-direction: column;
+justify-content: space-around;
+align-items: center;
+text-align: center;
+}
+.soumission-left-text h3{
+  margin:0.2rem 0 1rem 0;
+  padding:0 5rem;
+}
+.soumission-left-text h1{
+  margin-top: 0;
+  color:#232655;
+  
+}
+#soumission-right{
+  background-image: url("./images/pexels-lisa-fotios-1666467.jpg");
+  background-size: cover;
+  width:50%;
+  height:100%;
+}
+.button-soumission {
+  background-color: #232655;
+  color: #fff;
+  width: 12.5rem;
+  height: 2.9em;
+  border: #232655 0.2em solid;
+  border-radius: 33px;
+  text-align: right;
+  transition: all 0.6s ease;
+}
+
+.button-soumission:hover {
+  background-color: #3654ff;
+  border: #3654ff 0.2em solid;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-soumission svg {
+  width: 1.6em;
+  margin: -0.2em -0.2em 2em;
+  position: absolute;
+  display: flex;
+  transition: all 0.6s ease;
+}
+
+.button-soumission:hover svg {
+  transform: translateX(5px);
+}
+
+.text {
+  margin: 0 1.5em
+}
+.soumission-images-bar{
+  width:90%;
+  height:20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.soumission-images-bar a{
+  height:100%
+}
+.soumission-images-bar a img{
+  width:4rem;
+}
+/***********************************/
+.articles-container{
+  grid-area: articles;
+  margin: 0;
+  width: 100%;
+  height:100%;
+  background-color: #F9F5F6;
+  
+}
+#articles-bottom{
+  width: 100%;
+  height: 75%; 
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  
+
+}
+.articles{
+  margin:0 2rem;
+  width:35rem;
+  height:15rem;
+  background-color: #fff;
+  display:flex;
+  box-shadow:  -21px 21px 41px #cfcfcf
+}
+.articles-picture{
+  width:45%;
+}
+.articles-text{
+  width:55%;
+}
+
+#first-article{
+  background-image: url("./images/alesia-kazantceva-XLm6-fPwK5Q-unsplash.jpg");
+  background-size: cover;
+}
+#second-article{
+  background-image: url("./images/simple-finance-background-.jpg");
+  background-size: cover;
+}
+#third-article{
+  background-image: url("./images/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg");
+  background-size: cover;
+}
+
+
+#articles-top{
+  height:25%;
+  width:95%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+#articles-box{
+  width:35%;
+  height:4rem;
+  background-color: #232655;
+  box-shadow:  0.3rem 0.3rem 3px #DFD3C3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#titre-articles{
+  color: white;
+  font-size:2rem;
+}
+article{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding:1rem;
+}
+.main-text{
+  text-align: left;
+}
+#number-of-view-article-1{
+  font-size: 1rem;
+  padding-right: 0.2rem;
+}
+.social-bar{
+  display: flex;
+  justify-content: space-between;
+}
+.main-text h2{
+  font-size: 1rem;
+}
+.main-text p{
+  font-size: 0.825rem;
+}
+.date p{
+  margin:0;
+  font-size: 0.825rem;
+  color: grey;
+}
+/*******************************************************/
+footer{
+  grid-area:footer;
+}
+#question-box{
+  height:70%;
+  width:100%;
+  background-color: #DFD3C3;
+  display: flex;
+}
+#question-box-left{
+  width:35%;
+  padding:0 1rem;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#question-box-left h1,h4{
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+#contacter-moi-box{
+  width:10rem;
+  height:3rem;
+  display: flex;
+  justify-content: space-around;
+  color:white;
+  background-color: #232655;
+}
+#question-box-right{
+  width: 60%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.contact-box{
+  height:100%;
+  width:25%;
+}
+#contact-box-email{
+  background-image: url("./images/pexels-cottonbro-studio-3202235.jpg");
+  background-size: cover; 
+}
+#contact-box-cell{
+  background-image: url("./images/pexels-andrea-piacquadio-859264.jpg");
+  background-size: cover;
+}
+#contact-box-facebook{
+  background-image: url("./images/pexels-fauxels-3184465.jpg");
+  background-size: cover;
+}
+#contact-box-linkedin{
+  background-image: url("./images/pexels-andrea-piacquadio-3760067.jpg");
+  background-size: cover;
+}
+.contact-box-area{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+  height:60%;
+}
+.contact-box a{
+  color:black;
+  }
+#contacter-moi-box svg{
+  width: 1.6em;
+  transition: all 0.6s ease;
+  text-align: center;
+  vertical-align: center;
+}
+.background-color{
+  width:100%;
+  height:100%;
+  opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#background-color-email{
+  background-color: white;
+}
+#background-color-cell{
+  background-color: #cfcfcf;
+}
+#background-color-facebook{
+  background-color: #232655;
+}
+#background-color-linkedin{
+  background-color: #749BC2;
+}
+.background-color img{
+  width:25%;
+}
+#text-courriel{
+ font-weight: bolder;
+  font-size: 1.25rem;
+}
+#text-cell{
+  font-weight: bolder;
+   font-size: 1rem;
+   margin-top:0.2rem;
+ }
+
+#reference-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:40%;
+  background-color: #232655;
+}
+#reference-footer p{
+  color:white;
+  font-size: 12px;
+}
+#reference-footer-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 30%;
+  height:100%;
+  margin-left: 5%;
+}
+#reference-nom p{
+  font-weight: bold;
+  color: #232655;
+  margin:0;
+}
+#reference-nom h4,h5{
+  color:white;
+}
+#reference-adresse p{
+  font-size: 12px;
+  color:white;
+  margin:0;
+}
+#reference-adresse{
+  margin-top: 1.5rem;
+}
+#social-icon-bar{
+  margin: 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width:100%;
+
+}
+#social-icon-bar a{
+  margin:0 1rem 0 0;
+  width: 1.5rem;
+}
+#social-icon-bar img{
+  width:100%;
+  height:100%;
+}
+#reference-footer-middle{
+  height:100%;
+  width:30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#adresse{
+  text-align: center;
+}
+#reference-footer-right{
+  width:30%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#reference-footer-right-text h3{
+  text-align: right;
+  color:white;
+  margin: 0rem 1rem;
+}
+
+/***********************PAGE SERVICES*****************************/
+
+#services-main-container{
+  grid-area: services;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#services-offert-box{
+  width: 20%;
+  height: 3rem;
+  box-shadow:  -0.3rem 0.3rem 0.3rem 3px grey;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#services-offert-box h1{
+  color:#232655;
+}
+
+#choix-services-box{
+  height:80%;
+  width: 100%;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.choix-services{
+  width:40%;
+  height:60%;
+  box-shadow: 0.6rem 0.6rem 6px #cfcfcf;
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.choix-services a{
+  width:40%;
+}
+.choix-services h1{
+  width:100%;  
+  padding:0.5rem 0.5rem 0.5rem 0.5rem;
+  background-color: #232655;
+  color: white;
+
+}
+
+#choix-epargne{
+  background-image: url("./images/pexels-joslyn-pickens-3833052.jpg");
+  background-size: cover;
+}
+#choix-assurances{
+  background-image: url("./images/6291bc4437e08978dc9c0ead_Building\ Insurance.png");
+  background-size: cover;
+}
+/**************Contact*************/
+
+.contact-grid{
+  display: grid;
+  width:100%;
+    position: relative;
+    margin: auto;
+    grid-template-areas: "nav"
+                         "contact"
+                         "footer";
+   grid-template-columns: 100%;
+   grid-template-rows: 15vh 45rem 30rem;                    
+}
+
+#contact-container{
+  grid-area: contact;
+}
+#form-contact-info{
+  text-align: center;
+  padding-top: 1rem;
+}
+#form-contact-info p {
+margin:0.2rem;
+
+}
+
+#contact-box{
+  width:90%;
+  height:85%;
+  margin: 0 5%;
+  display:flex;
+  justify-content: center;
+ 
+
+  
+}
+#contact-box-top{
+  width:90%;
+  margin: 0 5%;
+  height:6rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/Untitled\ design.png");
+  background-size:cover;
+
+}
+#contact-box-top h1{
+  color:#232655;
+  width:100%;
+  text-align: center;
+}
+.form {
+  background-color: #fff;
+  width:40%;
+  height:30rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -0.6rem  0.7rem 1.5rem 6px grey;
+  padding:2rem 2rem 0 2rem;
+
+}
+.group {
+  position: relative;
+}
+
+.form .group label {
+  font-size: 14px;
+  color: rgb(99, 102, 102);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  transition: all .3s ease;
+}
+
+.form .group input,
+.form .group textarea {
+  padding: 0.7rem 0 0.7rem 0.7rem;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.2rem;
+  outline: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.form .group input:placeholder-shown+ label, .form .group textarea:placeholder-shown +label {
+  top: 0.7rem;
+  background-color: transparent;
+}
+
+.form .group input:focus,
+.form .group textarea:focus {
+  border-color: #232655;
+}
+
+.form .group input:focus+ label, .form .group textarea:focus +label {
+  top: -0.7rem;
+  left: 0.7rem;
+  background-color: #fff;
+  color: #232655;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form .group textarea {
+  resize: none;
+  height: 8rem;
+}
+
+.form button {
+  background-color: #232655;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #3654ff;
+}
+
+/*****************epargne********************/
+.epargne-grid{
+  display:grid;
+  width:100%;
+    position: relative;
+    margin: auto;
+    grid-template-areas: "nav"
+                         "epargne"
+                         "footer";
+   grid-template-columns: 100%;
+   grid-template-rows: 15vh 145rem 30rem;                    
+}
+.epargne-container{
+  grid-area:epargne;
+  width:90%;
+  margin:0 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+#epargne-titre{
+text-transform: uppercase;
+width:50%;
+background-color: #232655;
+color: white;
+padding:1rem;
+text-align: right;
+}
+.section-texte{
+  width:100%;
+  height:23rem;
+  display:flex;
+  margin:2rem 0;
+  
+}
+.epargne-images{
+  width:50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.epargne-images img{
+  width:60%;
+}
+.epargne-texte{
+  width:50%;
+  height:80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:1rem 0;
+}
+.epargne-texte h2{
+  color:#232655;
+}
+.epargne-texte p{
+  line-height: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 550;
+  padding:0 2rem;
+  text-align: justify;
+
+}
+.epargne-slogan{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+ width:100%;
+ height:15rem;
+  background-image: url("./images/epargne-background.png");
+  background-size: cover;
+}
+
+/********************Assurances****************/
+.assurance-grid{
+  display:grid;
+  width:100%;
+    position: relative;
+    margin: auto;
+    grid-template-areas: "nav"
+                         "assurance"
+                         "footer";
+   grid-template-columns: 100%;
+   grid-template-rows: 15vh 100rem 30rem; 
+   font-family: 'Montserrat', sans-serif;           
+}
+.main-assurance-grid{
+  grid-area: assurance;
+  display:grid;
+  grid-template-columns: repeat(14,1fr);
+  grid-template-rows:repeat(30,1fr) ;
+gap:1rem;
+}
+.assurance-banner-top{
+  grid-row: 1/ 7;
+  grid-column: 2/14;
+  background-image: url("./images/background-assurance.jpg");
+  background-size: cover;
+  position:relative;
+  margin:0 -1rem;
+}
+#titre-assurance{
+  position:absolute;
+  top:5rem;
+  background-color: #232655;
+  color:white;
+  padding:1rem;
+  width:50%;
+  font-size:2rem;
+  text-align: right;
+}
+.produits-assurance{
+  background-color:white;
+  box-shadow: -0.5rem 0.5rem 16px grey;
+  z-index:10;
+  display:flex;
+  align-items: center;
+  text-align: justify;
+}
+#assurance-vie ul{
+  margin: 2rem;
+}
+#assurance-vie li{
+  color:#232655;
+  font-weight: bold;
+}
+#assurance-vie{
+  grid-row: 6/14;
+  grid-column: 2/14;
+}
+#titre-assurance-vie{
+  margin:5%;
+  width:60rem;
+  background-image: url("./images/pexels-oleksandr-canary-islands-3036405.jpg");
+  background-size: cover;
+  text-align: center;
+  height:80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+.titre-assurances-box h2{
+  margin:0;
+  width:100%;
+  height: fit-content;
+  background-color: #fff;
+  color: #232655;
+  padding: 0.2rem 0.5rem;
+}
+
+#assurance-maladie{
+  grid-row:15/23;
+  grid-column: 2/14;
+}
+#assurance-maladie ul{
+  width:50%;
+ margin: 1.5rem;
+}
+#assurance-maladie li{
+  margin: 1.5rem 0;
+}
+#titre-assurance-maladie{
+  margin:5%;
+  width:40%;
+  background-image: url("./images/istockphoto-1189132246-612x612.jpg");
+  background-size: cover;
+  text-align: center;
+  height:80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+#assurance-invaliditer{
+  grid-row:24/30;
+  grid-column:2/8;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding:1rem;
+}
+#titre-assurance-invaliditer{
+  background-image: url("./images/depositphotos_440325776-stock-photo-concept-of-disability-insurance-with.jpg");
+  background-size: cover;
+  height:70%;
+  width:95%;
+  display:flex;
+  align-items: center;
+  text-align: center;
+}
+#assurance-invaliditer span{
+  
+  margin: 0.5rem 2rem 1rem 2rem;
+}
+#assurance-auto-hab{
+  grid-row:24/30;
+  grid-column:9/14;
+}
+.soumission-assurance{
+  margin:1.2rem;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+/***********A propos************************/
+.apropos-grid{
+  display:grid;
+  width:100%;
+    position: relative;
+    margin: auto;
+    grid-template-areas: "nav"
+                         "assurance"
+                         "footer";
+   grid-template-columns: 100%;
+   grid-template-rows: 15vh 85vh 30rem; 
+   font-family: 'Montserrat', sans-serif;           
+}
+#main-apropos{
+  display: flex;
+  align-items: center;
+  width:90%;
+  margin:0 5%;
+ 
+}
+#image-apropos{
+  width:40%;
+}
+#image-apropos img{
+  width:18rem
+}
+#texte-apropos{
+  width:70%;
+  text-align: justify;
+}
+#texte-apropos p{
+  margin: 2rem 0;
+  line-height: 1.4rem;
+}
+#texte-apropos h1{
+margin-top:0;
+
+}
+#info-apropos{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color:gray;
+}
+#info-apropos a{
+  color:gray;
+}
