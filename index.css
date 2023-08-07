@@ -842,22 +842,19 @@ margin:0.2rem;
 }
 #contact-box-top{
   width:90%;
-  margin: 0 auto;
+  margin: 0 5%;
   height:6rem;
   display:flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  background-color:#cfcfcf;
+  background-image: url("./images/Untitled\ design.png");
   background-size:cover;
-  
 
 }
 #contact-box-top h1{
-  color: white;
-  background-color: #232655;
-  width:70%;
-  text-align: right;
-  padding-right: 1rem;
+  color:#232655;
+  width:100%;
+  text-align: center;
 }
 .form {
   background-color: #fff;
