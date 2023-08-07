@@ -842,19 +842,22 @@ margin:0.2rem;
 }
 #contact-box-top{
   width:90%;
-  margin: 0 5%;
+  margin: 0 auto;
   height:6rem;
   display:flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  background-image: url("./images/Untitled\ design.png");
+  background-color:#cfcfcf;
   background-size:cover;
+  
 
 }
 #contact-box-top h1{
-  color:#232655;
-  width:100%;
-  text-align: center;
+  color: white;
+  background-color: #232655;
+  width:70%;
+  text-align: right;
+  padding-right: 1rem;
 }
 .form {
   background-color: #fff;
@@ -964,7 +967,6 @@ text-align: right;
   height:23rem;
   display:flex;
   margin:2rem 0;
-  
 }
 .epargne-images{
   width:50%;
@@ -973,7 +975,7 @@ text-align: right;
   justify-content: center;
 }
 .epargne-images img{
-  width:60%;
+  width:70%;
 }
 .epargne-texte{
   width:50%;
@@ -982,13 +984,12 @@ text-align: right;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding:1rem 0;
 }
 .epargne-texte h2{
   color:#232655;
 }
 .epargne-texte p{
-  line-height: 2rem;
+  line-height: 1.6rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 550;
   padding:0 2rem;
