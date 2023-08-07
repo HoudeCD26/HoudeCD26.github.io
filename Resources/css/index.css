@@ -1,5 +1,5 @@
 html{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;  
 }
 body{
   margin:0;
@@ -13,18 +13,6 @@ body{
   html{
     font-size: 8px;
   }
-}
-@media only screen and (max-width:1440px){
-  .nav-bar li {
-    font-size: 0.8rem;
-  }
-  #rendez-vous{
-  font-size: 0.5rem;
-  }
-  .services{
-    height:10rem;
-  }
-
 }
 h2{
   margin: 0.725rem 0;
@@ -87,12 +75,12 @@ display: inline-block;
 
 .nav-bar li a{
   color:#232655;
-  font-family: Helvetica, arial, sans-serif;
 }
 .dropbtn {
   color: #232655;
   background-color: white;
   border: none;
+  font-size: 1rem;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -106,7 +94,7 @@ display: inline-block;
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 6rem;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -114,7 +102,7 @@ display: inline-block;
 /* Links inside the dropdown */
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 0.7rem 1rem;
   text-decoration: none;
   display: block;
 }
@@ -133,7 +121,8 @@ display: inline-block;
   align-items: center;
 }
 #logo-images{
-  WIDTH:4rem;
+  width:4rem;
+  margin-right: 0.5rem;
 }
 
 .logotext{
@@ -964,7 +953,6 @@ text-align: right;
   height:23rem;
   display:flex;
   margin:2rem 0;
-  
 }
 .epargne-images{
   width:50%;
@@ -982,13 +970,12 @@ text-align: right;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding:1rem 0;
 }
 .epargne-texte h2{
   color:#232655;
 }
 .epargne-texte p{
-  line-height: 2rem;
+  line-height: 1.6rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 550;
   padding:0 2rem;
@@ -1000,7 +987,7 @@ text-align: right;
   justify-content: flex-start;
   align-items: center;
  width:100%;
- height:23rem;
+ height:15rem;
   background-image: url("./images/epargne-background.png");
   background-size: cover;
 }
