@@ -38,7 +38,7 @@ p{
                          "articles"
                          "footer";
    grid-template-columns: 100%;
-   grid-template-rows: 15vh 90vh 70rem 30rem 30rem;                    
+   grid-template-rows: 15vh 80vh 70rem 30rem 30rem;                    
 }
 .grid-services{
   display: grid;
@@ -62,7 +62,7 @@ a{
   grid-area: nav;
   position:sticky;
   top:0px;
-  background-color: white;
+  background-color: #fff;
   z-index:100;
 }
 .nav-bar{
@@ -79,6 +79,44 @@ display: inline-block;
   color:#232655;
   font-family: Helvetica, arial, sans-serif;
 }
+.dropbtn {
+  color: #232655;
+  background-color: white;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #DFD3C3;}
 #logo{
   display: flex;
   justify-content: center;
@@ -185,20 +223,20 @@ background-size:cover;
   align-items: flex-end;
 }
 .banner-slogan{
- margin:0;
+ margin:0 0 3rem 0;
   color: #232655;
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-family: 'Poppins', sans-serif;
-  text-align: right;
+  text-align: center;
 
 }
 .banner-description{
- margin: 1.5rem 0 1.5rem 0;
+ margin: 0.2rem 1rem 0.2rem 1rem;
  height:fit-content;
  text-align:justify;
  line-height: 1.6;
  color: black;
- font-size: 1rem;
+ font-size: 1.1rem;
  font-family:  Helvetica, arial, sans-serif;
 }
 #button-banner-2{
@@ -210,7 +248,7 @@ background-size:cover;
   cursor: pointer;
   border: none;
   padding: 0.9rem 2rem;
-  margin: 0;
+  margin: 2rem 0 0 0;
   font-family: inherit;
   font-size: inherit;
   position: relative;
@@ -695,7 +733,7 @@ footer{
   margin: 0rem 1rem;
 }
 
-/**************************************PAGE SERVICES*****************************/
+/***********************PAGE SERVICES*****************************/
 
 #services-main-container{
   grid-area: services;
@@ -707,15 +745,16 @@ footer{
   align-items: center;
 }
 #services-offert-box{
-  height:20%;
-  width: 100%;
-  display:flex;
+  width: 20%;
+  height: 3rem;
+  box-shadow:  -0.3rem 0.3rem 0.3rem 3px grey;
+  display: flex;
   justify-content: center;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
 }
 #services-offert-box h1{
-  padding:0.5rem;
-  color:#232655
+  color:#232655;
 }
 
 #choix-services-box{
@@ -763,47 +802,378 @@ footer{
                          "contact"
                          "footer";
    grid-template-columns: 100%;
-   grid-template-rows: 15vh 30rem 30rem;                    
+   grid-template-rows: 15vh 90vh 30rem;                    
 }
 
 #contact-container{
   grid-area: contact;
 }
+#form-contact-info{
+  text-align: center;
+  padding-top: 1rem;
+}
+#form-contact-info p {
+margin:0.2rem;
+
+}
+
 #contact-box{
-  width:80%;
-  height:80%;
-  margin: 5%;
+  width:90%;
+  height:60%;
+  margin: 0 5%;
   display:flex;
+  justify-content: center;
+
+  
 }
-#contact-box-right{
-  padding-left:3rem;
-  width:65%;
-  height:100%;
-  display:flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-#contact-box-form{
-  width:35%;
-  height:100%;
+#contact-box-top{
+  width:90%;
+  margin: 0 5%;
+  height:15%;
   display:flex;
   justify-content: center;
   align-items: center;
+  background-image: url("./images/Untitled\ design.png");
+  background-size:cover;
+
 }
-#form-contact{
-  margin:0 auto;
-  width:100%;
-  height:100%;
-  background-color:#F9F5F6;
+#contact-box-top h1{
   color:#232655;
+  width:100%;
+  text-align: center;
+}
+.form {
+  background-color: #fff;
+  width:40%;
+  height:25rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -0.6rem  0.7rem 1.5rem 6px grey;
+  padding:2rem;
+
+}
+.group {
+  position: relative;
+}
+
+.form .group label {
+  font-size: 14px;
+  color: rgb(99, 102, 102);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  transition: all .3s ease;
+}
+
+.form .group input,
+.form .group textarea {
+  padding: 10px 0 10px 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  outline: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.form .group input:placeholder-shown+ label, .form .group textarea:placeholder-shown +label {
+  top: 10px;
+  background-color: transparent;
+}
+
+.form .group input:focus,
+.form .group textarea:focus {
+  border-color: #232655;
+}
+
+.form .group input:focus+ label, .form .group textarea:focus +label {
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  color: #232655;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form .group textarea {
+  resize: none;
+  height: 100px;
+}
+
+.form button {
+  background-color: #232655;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #3654ff;
+}
+
+/*****************epargne********************/
+.epargne-grid{
+  display:grid;
+  width:100%;
+    position: relative;
+    margin: auto;
+    grid-template-areas: "nav"
+                         "epargne"
+                         "footer";
+   grid-template-columns: 100%;
+   grid-template-rows: 15vh 145rem 30rem;                    
+}
+.epargne-container{
+  grid-area:epargne;
+  width:90%;
+  margin:0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#epargne-titre{
+text-transform: uppercase;
+width:50%;
+background-color: #232655;
+color: white;
+padding:1rem;
+text-align: right;
+}
+.section-texte{
+  width:100%;
+  height:20%;
+  display:flex;
+  margin:2rem 0;
+  
+}
+.epargne-images{
+  width:50%;
+  height:80%;
+  text-align: CENTER;
+}
+.epargne-images img{
+  width:85%;
+}
+.epargne-texte{
+  width:50%;
+  height:80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: -0.7rem 0.7rem 6px #cfcfcf;
+  padding:1rem 0;
+}
+.epargne-texte h2{
+  color:#232655;
+}
+.epargne-texte p{
+  line-height: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 550;
+  padding:0 2rem;
+  text-align: justify;
 
 }
-.form-input-data{
-  margin:0.5rem 0;
+.epargne-slogan{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+ width:100%;
+ height:20%;
+  background-image: url("./images/epargne-background.png");
+  background-size: cover;
+}
+
+/********************Assurances****************/
+.assurance-grid{
+  display:grid;
+  width:100%;
+    position: relative;
+    margin: auto;
+    grid-template-areas: "nav"
+                         "assurance"
+                         "footer";
+   grid-template-columns: 100%;
+   grid-template-rows: 15vh 100rem 30rem; 
+   font-family: 'Montserrat', sans-serif;           
+}
+.main-assurance-grid{
+  grid-area: assurance;
+  display:grid;
+  grid-template-columns: repeat(14,1fr);
+  grid-template-rows:repeat(30,1fr) ;
+gap:1rem;
+}
+.assurance-banner-top{
+  grid-row: 1/ 7;
+  grid-column: 2/14;
+  background-image: url("./images/background-assurance.jpg");
+  background-size: cover;
+  position:relative;
+  margin:0 -1rem;
+}
+#titre-assurance{
+  position:absolute;
+  top:5rem;
+  background-color: #232655;
+  color:white;
+  padding:1rem;
+  width:50%;
+  font-size:2rem;
+  text-align: right;
+}
+.produits-assurance{
+  background-color:white;
+  box-shadow: -0.5rem 0.5rem 16px grey;
+  z-index:10;
+  display:flex;
+  align-items: center;
+  text-align: justify;
+}
+#assurance-vie ul{
+  margin: 2rem;
+}
+#assurance-vie li{
+  color:#232655;
+  font-weight: bold;
+}
+#assurance-vie{
+  grid-row: 6/14;
+  grid-column: 2/14;
+}
+#titre-assurance-vie{
+  margin:5%;
+  width:60rem;
+  background-image: url("./images/pexels-oleksandr-canary-islands-3036405.jpg");
+  background-size: cover;
+  text-align: center;
+  height:80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+.titre-assurances-box h2{
+  margin:0;
+  width:100%;
+  height: fit-content;
+  background-color: #fff;
+  color: #232655;
+  padding: 0.2rem 0.5rem;
+}
+
+#assurance-maladie{
+  grid-row:15/23;
+  grid-column: 2/14;
+}
+#assurance-maladie ul{
+  width:50%;
+ margin: 1.5rem;
+}
+#assurance-maladie li{
+  margin: 1.5rem 0;
+}
+#titre-assurance-maladie{
+  margin:5%;
+  width:40%;
+  background-image: url("./images/istockphoto-1189132246-612x612.jpg");
+  background-size: cover;
+  text-align: center;
+  height:80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+#assurance-invaliditer{
+  grid-row:24/30;
+  grid-column:2/8;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding:1rem;
+}
+#titre-assurance-invaliditer{
+  background-image: url("./images/depositphotos_440325776-stock-photo-concept-of-disability-insurance-with.jpg");
+  background-size: cover;
+  height:70%;
+  width:95%;
+  display:flex;
+  align-items: center;
+  text-align: center;
+}
+#assurance-invaliditer span{
+  
+  margin: 0.5rem 2rem 1rem 2rem;
+}
+#assurance-auto-hab{
+  grid-row:24/30;
+  grid-column:9/14;
+}
+.soumission-assurance{
+  margin:1.2rem;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+/***********A propos************************/
+.apropos-grid{
+  display:grid;
+  width:100%;
+    position: relative;
+    margin: auto;
+    grid-template-areas: "nav"
+                         "assurance"
+                         "footer";
+   grid-template-columns: 100%;
+   grid-template-rows: 15vh 85vh 30rem; 
+   font-family: 'Montserrat', sans-serif;           
+}
+#main-apropos{
+  display: flex;
+  align-items: center;
+  width:90%;
+  margin:0 5%;
+ 
+}
+#image-apropos{
+  width:40%;
+}
+#image-apropos img{
+  width:18rem
+}
+#texte-apropos{
+  width:70%;
+  text-align: justify;
+}
+#texte-apropos p{
+  margin: 2rem 0;
+  line-height: 1.4rem;
+}
+#texte-apropos h1{
+margin-top:0;
+
+}
+#info-apropos{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color:gray;
+}
+#info-apropos a{
+  color:gray;
 }
