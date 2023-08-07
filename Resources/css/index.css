@@ -4,6 +4,16 @@ html{
 body{
   margin:0;
 }
+@media only screen and (max-width:768px){
+  html{
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width:425px){
+  html{
+    font-size: 8px;
+  }
+}
 @media only screen and (max-width:1440px){
   .nav-bar li {
     font-size: 0.8rem;
@@ -323,7 +333,7 @@ background-size:cover;
 }
 #services-principale{
   margin-top: 0rem;
-  height:40%;
+  height:22rem;
   width:100%;
   display:flex;
   flex-wrap: wrap;
@@ -342,14 +352,15 @@ background-size:cover;
 
   margin:0;
   width: 22%;
-  height: 65%;
+  height: 12rem;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  box-shadow:  21px 10px 41px #cfcfcf
+  box-shadow:  21px 10px 41px #cfcfcf;
+  padding: 0.5rem;
 }
 .epargne-logo{
   width:25%;
@@ -443,7 +454,9 @@ text-align: center;
 }
 .soumission-images-bar a{
   height:100%
-
+}
+.soumission-images-bar a img{
+  width:4rem;
 }
 /***********************************/
 .articles-container{
@@ -802,7 +815,7 @@ footer{
                          "contact"
                          "footer";
    grid-template-columns: 100%;
-   grid-template-rows: 15vh 90vh 30rem;                    
+   grid-template-rows: 15vh 45rem 30rem;                    
 }
 
 #contact-container{
@@ -819,17 +832,18 @@ margin:0.2rem;
 
 #contact-box{
   width:90%;
-  height:60%;
+  height:85%;
   margin: 0 5%;
   display:flex;
   justify-content: center;
+ 
 
   
 }
 #contact-box-top{
   width:90%;
   margin: 0 5%;
-  height:15%;
+  height:6rem;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -845,12 +859,12 @@ margin:0.2rem;
 .form {
   background-color: #fff;
   width:40%;
-  height:25rem;
+  height:30rem;
   margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   box-shadow: -0.6rem  0.7rem 1.5rem 6px grey;
-  padding:2rem;
+  padding:2rem 2rem 0 2rem;
 
 }
 .group {
@@ -869,17 +883,17 @@ margin:0.2rem;
 
 .form .group input,
 .form .group textarea {
-  padding: 10px 0 10px 10px;
+  padding: 0.7rem 0 0.7rem 0.7rem;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
+  margin-bottom: 1.2rem;
   outline: 0;
   width: 100%;
   background-color: transparent;
 }
 
 .form .group input:placeholder-shown+ label, .form .group textarea:placeholder-shown +label {
-  top: 10px;
+  top: 0.7rem;
   background-color: transparent;
 }
 
@@ -889,8 +903,8 @@ margin:0.2rem;
 }
 
 .form .group input:focus+ label, .form .group textarea:focus +label {
-  top: -10px;
-  left: 10px;
+  top: -0.7rem;
+  left: 0.7rem;
   background-color: #fff;
   color: #232655;
   font-weight: 600;
@@ -899,7 +913,7 @@ margin:0.2rem;
 
 .form .group textarea {
   resize: none;
-  height: 100px;
+  height: 8rem;
 }
 
 .form button {
@@ -907,7 +921,7 @@ margin:0.2rem;
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 10px;
+  padding: 0.7rem;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -935,7 +949,6 @@ margin:0.2rem;
   margin:0 5%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 #epargne-titre{
@@ -948,18 +961,19 @@ text-align: right;
 }
 .section-texte{
   width:100%;
-  height:20%;
+  height:23rem;
   display:flex;
   margin:2rem 0;
   
 }
 .epargne-images{
   width:50%;
-  height:80%;
-  text-align: CENTER;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .epargne-images img{
-  width:85%;
+  width:60%;
 }
 .epargne-texte{
   width:50%;
@@ -986,7 +1000,7 @@ text-align: right;
   justify-content: flex-start;
   align-items: center;
  width:100%;
- height:20%;
+ height:23rem;
   background-image: url("./images/epargne-background.png");
   background-size: cover;
 }
