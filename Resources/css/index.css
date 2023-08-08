@@ -4,10 +4,12 @@
 html{
   font-family: 'Montserrat', sans-serif;  
   margin:0;
+  width:100%;
   overflow-x: hidden;
 }
 body{
   margin:0;
+  overflow-x: hidden
 }
 
 
@@ -39,9 +41,10 @@ a{
   text-decoration:none;
 }
 
-section{
-  padding: 2rem 1rem;
-  width:90%;
+.navigation-bar{
+  width:100%;
+  padding: 2rem 0;
+  grid-area: nav;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,12 +66,16 @@ section{
 }
 #logo{
   display: flex;
+  margin-left:3rem;
   padding-left: 0.5rem;
 
 }
 .logo-nom{
   font-weight: bold;
   color:#232655;
+}
+.toggleBox{
+  margin-right: 3rem;
 }
 .toggleBox a img{
   width:2rem;
@@ -88,11 +95,12 @@ nav.navigation.active{
   position:fixed;
   left:0;
   top:0;
-  width:100vh;
-  height:100vh;
+  width:100%;
+  height:100%;
   background-color: #232655;
   justify-content: center;
   align-items: center;
+  overflow: scroll;
   
 }
 .dropbtn {
@@ -308,26 +316,13 @@ background-size:cover;
   font-size:2.1rem;
   color:#3654ff;
 }
-#soumission{
-  margin:1rem auto 1.5rem auto;
-  height: 50%;
-  width: 70%;
-  display:flex;
-  box-shadow:  21px 21px 41px #cfcfcf;
-  z-index:10;
-}
-#soumission-left{
-  width:50%;  
-}
 .soumission-left-text{
-  margin :5%;
-  width: 90%;
-  height:90%;
+  height:100%;
   display: flex;
   flex-direction: column;
-justify-content: space-around;
-align-items: center;
-text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
 .soumission-left-text h3{
   margin:0.2rem 0 1rem 0;
@@ -338,11 +333,22 @@ text-align: center;
   color:#232655;
   
 }
-#soumission-right{
-  background-image: url("./images/pexels-lisa-fotios-1666467.jpg");
-  background-size: cover;
-  width:50%;
-  height:100%;
+#soumission{
+  margin:1rem auto 1.5rem auto;
+      height: 22rem;
+      width: 70%;
+      display:flex;
+      flex-direction: column;
+      box-shadow:  21px 21px 41px #cfcfcf;
+      z-index:10;
+}
+#soumission-left{
+  height: 100%;
+  width: 100%;
+}
+.soumission-left-text h3,.soumission-assurance h3{
+  font-size: 1rem;
+  margin:0;
 }
 .button-soumission {
   background-color: #232655;
@@ -837,6 +843,7 @@ text-align: right;
 }
 .epargne-texte h2{
   color:#232655;
+  text-align: center;
 }
 .epargne-texte p{
   line-height: 1.6rem;
@@ -1005,7 +1012,7 @@ gap:1rem;
                          "apropos"
                          "footer";
    grid-template-columns: 100%;
-   grid-template-rows: 15vh 85vh 30rem; 
+   grid-template-rows: 15vh 50rem 30rem; 
    font-family: 'Montserrat', sans-serif;           
 }
 #main-apropos{
@@ -1023,6 +1030,7 @@ gap:1rem;
   width:18rem
 }
 #texte-apropos{
+  margin-left: 1rem;
   width:70%;
   text-align: justify;
 }
@@ -1046,13 +1054,13 @@ margin-top:0;
 }
 /***************************Media query*******************************/
 @media only screen and (min-width:991px){
-  section{
-      padding: 1rem 4rem;
+.navigation-bar{
+      padding: 2rem 0 ;
       display:flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       grid-area: nav;
-      position:sticky;
+      position:fixed;
       top:0px;
       background-color: #fff;
       z-index:100;
@@ -1114,6 +1122,7 @@ margin-top:0;
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-left: 0;
     }
     #logo-images{
       width:4rem;
@@ -1179,6 +1188,36 @@ margin-top:0;
      #rendez-vous::after {
       background-color: #3654ff;
      }
+     #soumission{
+      margin:1rem auto 1.5rem auto;
+      height: 50%;
+      width: 70%;
+      display:flex;
+      flex-direction: row;
+      box-shadow:  21px 21px 41px #cfcfcf;
+      z-index:10;
+    }
+     
+#soumission-left{
+  width:50%;  
+}
+.soumission-left-text{
+  margin :5%;
+  width: 90%;
+  height:90%;
+  display: flex;
+  flex-direction: column;
+justify-content: space-around;
+align-items: center;
+text-align: center;
+}
+
+#soumission-right{
+  background-image: url("./images/pexels-lisa-fotios-1666467.jpg");
+  background-size: cover;
+  width:50%;
+  height:100%;
+}
 }
 
 @media only screen and (max-width:768px){
@@ -1229,20 +1268,8 @@ margin-top:0;
   #services-top{
     margin-top: 0;
   }
-  #soumission{
-    width:85%;
-    margin:2rem auto 0 auto;
-    height: 23rem;
-    flex-direction: column;
-  }
-  #soumission-left{
-    height: 100%;
-    width: 100%;
-  }
-  .soumission-left-text h3,.soumission-assurance h3{
-    font-size: 1rem;
-    margin:0;
-  }
+  
+  
   #soumission-right{
     display: none;
   }
@@ -1276,7 +1303,7 @@ height:25rem
   }
 #reference-footer{
   flex-wrap: wrap;
-  height:20rem;
+  height:21rem;
   align-items: flex-start;
 }
 #reference-footer-left{
