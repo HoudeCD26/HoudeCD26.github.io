@@ -1417,7 +1417,7 @@ height: 35rem;
     font-size: 12px ;
   }
   .main-grid{
-     grid-template-rows: 15vh 70rem 100rem 50rem;                    
+     grid-template-rows: 15vh 70rem 70rem 50rem;                    
   }
   #reference-footer{
     height:30rem;
@@ -1432,5 +1432,13 @@ height: 35rem;
   }  
   .contact-grid{
     grid-template-rows: 15vh 48rem 30rem;                    
+ }
+}
+@media only screen and (max-width:452px){
+  .main-grid{
+    grid-template-rows: 15vh 70rem 100rem 50rem;                    
+ }
+ .services{
+  width:18rem;
  }
 }
