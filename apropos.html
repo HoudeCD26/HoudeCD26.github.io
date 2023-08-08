@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Assurances</title>
-  <link rel="icon" type="image/x-icon" href="./Finance-img/logo3.1.png">
+  <link rel="icon" type="image/x-icon" href="./Finance-img/logo-favicon.png">
   <link href="./Resources/css/index.css" type="text/css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,34 +14,43 @@
 <body>
 
 <div class="apropos-grid">
+  <section>
+    <div id="logo">
+        <a id="reference-home" href="#">
+        <img id="logo-images" src="./Finance-img/logo4.0.png" alt="Logo conseiller financier">
+        </a>
+        <div class="logotext">
+        <span class="logo-nom">Jean-Christophe Houde</span>
+        <span class="logo-slogan ">Le Plaisir d'Investir</span> 
+      </div>
+      </div>
+      <nav class="navigation">
+        <a id="rendez-vous" href="https://outlook.office365.com/owa/calendar/JeanChristopheHoude@indall.onmicrosoft.com/bookings/?fbclid=IwAR2uvxUVnv0XdXWt0iYkKoOmJs33SB_vnoh6Qp34DYoqMFJKJYG4wz1BU6M" target="_blank">Prendre rendez-vous</a>
+        <a href="index.html">Accueil</a>
+        <div class="dropdown">
+            <a href="services.html">
+          <button class="dropbtn">Services</button></a>
+          <div class="dropdown-content">
+            <a href="epargne.html">Épargne</a>
+            <a href="assurance.html">Assurance</a>
+          </div>
+        </div>
+      <a href="apropos.html">A propos</a>
+      <a href="contact.html">Contact</a>
+      </nav>
+      <div class="toggleBox">
+        <a onclick="showMenu()" href="#"><img class="menu" src="./Finance-img/menu.png"><img class="close" src="./Finance-img/close.png">
+        </a>
+      </div>
+ </section>
+ <script>
+  function showMenu(){
+   document.querySelector('.navigation').classList.toggle('active');
+   document.querySelector('.menu').classList.toggle('hide');
+   document.querySelector('.close').classList.toggle('show');
+  } 
+</script>
 
-    <div class="nav">
-        <div id="logo">
-          <a id="reference-home" href="index.html">
-          <img id="logo-images" src="./Finance-img/logo4.0.png" alt="Logo conseiller financier">
-          </a>
-          <div class="logotext">
-          <span class="logo-nom">Jean-Christophe Houde</span>
-          <span class="logo-slogan ">Le Plaisir d'Investir</span> 
-        </div>
-        </div>
-      
-        <ul class="nav-bar">
-          <li><a id="rendez-vous" href="https://outlook.office365.com/owa/calendar/JeanChristopheHoude@indall.onmicrosoft.com/bookings/?fbclid=IwAR2uvxUVnv0XdXWt0iYkKoOmJs33SB_vnoh6Qp34DYoqMFJKJYG4wz1BU6M" target="_blank">Prendre rendez-vous</a></li>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="services.html">
-            <div class="dropdown">
-              <button class="dropbtn">Services</button></a>
-              <div class="dropdown-content">
-                <a href="epargne.html">Épargne</a>
-                <a href="assurance.html">Assurance</a>
-              </div>
-            </div>
-          </li>
-          <li><a href="apropos.html">A propos</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-       </div>
 
        <!------------------main----------->
        <div id="main-apropos">
