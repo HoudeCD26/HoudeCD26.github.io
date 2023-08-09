@@ -1,8 +1,4 @@
-<?php 
-if($_POST["message"]) {
-  mail("jean-christophe.houde@agc.ia.ca", "Here is the subject line",$_POST["insert your message here"]. "From: an@email.address");
-}
-?>
+
 <!DOCTYPE html>
 <html lang="fr-CA">
 
@@ -65,7 +61,8 @@ function showMenu(){
     <h1>Contacter moi pour obtenir un rendez-vous</h1>
     </div>
 <div id="contact-box">
-    <form  target="_blank" class="form" method="POST" action="https://formsubmit.co/fred.houde.95@gmail.com">
+    <form class="form" method="POST" action="https://formsubmit.co/jean-christophe.houde@agc.ia.ca">
+      <input type="hidden" name="_next" value="https://jchoudeconseiller.com/merci.html">
       <input type="hidden" name="_subject" value="nouvelle demande de contact recu par jchoudeconseiller.com">
       <div class="group">
       <input placeholder="" type="text" id="name" name="name" required="">

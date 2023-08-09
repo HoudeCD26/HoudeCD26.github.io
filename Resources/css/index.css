@@ -1050,6 +1050,33 @@ text-align: center;
 #info-apropos a{
   color:gray;
 }
+/***************merci*************/
+.merci-grid{
+  display: grid;
+  width:100%;
+    position: relative;
+    margin: auto;
+    grid-template-areas: "nav"
+                         "merci"
+                         "footer";
+   grid-template-columns: 100%;
+   grid-template-rows: 15vh 30rem 30rem;                    
+}
+#merci-container{
+  grid-area: merci;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#merci-container img{
+  width:5rem;
+}
+#message-remerciment{
+   text-align: center;
+  height:20rem;
+  width:30rem;
+  box-shadow: -0.5rem 0.5rem 16px grey;
+}
 /***************************Media query*******************************/
 @media only screen and (min-width:991px){
 .navigation-bar{
