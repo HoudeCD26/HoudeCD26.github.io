@@ -14,7 +14,7 @@
    </head>
 <body>
 <div class="assurance-grid">
-  <div class="navigation-bar">
+  <div id="navigation-bar">
     <div id="logo">
         <a id="reference-home" href="index.html">
         <img id="logo-images" src="./Finance-img/logo4.0.png" alt="Logo conseiller financier">
@@ -43,13 +43,7 @@
         </a>
       </div>
  </div>>
- <script>
-  function showMenu(){
-   document.querySelector('.navigation').classList.toggle('active');
-   document.querySelector('.menu').classList.toggle('hide');
-   document.querySelector('.close').classList.toggle('show');
-  } 
-</script>
+
 
       
        
@@ -222,6 +216,26 @@
   </footer>
 
 </div>
+<script>
+  function showMenu(){
+   document.querySelector('.navigation').classList.toggle('active');
+   document.querySelector('.menu').classList.toggle('hide');
+   document.querySelector('.close').classList.toggle('show');
+  } 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+  document.getElementById("logo-images").style.width = "2.8rem";
+  document.getElementById("navigation-bar").style.padding = "0.8rem 0";
+} else{
+  document.getElementById("logo-images").style.width = "4rem";
+  document.getElementById("navigation-bar").style.padding = "2rem 0";
+
+}
+}
+
+</script>
 
 </body>
 </html>

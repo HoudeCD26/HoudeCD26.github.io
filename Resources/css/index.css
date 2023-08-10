@@ -38,19 +38,21 @@ a{
   text-decoration:none;
 }
 
-.navigation-bar{
+#navigation-bar{
   width:100%;
-  padding: 2rem 0;
+  padding: 1.5rem 0rem;
   grid-area: nav;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position:fixed;
+  transition:0.4s;
   top:0;
   z-index: 100;
   background-color: #fff;
 }
 #logo-images{
+  transition:0.4s;
   width:3rem;
   display: inline-block;
 }
@@ -668,6 +670,7 @@ footer{
 }
 
 #contact-container{
+  padding-top: 1rem;
   grid-area: contact;
 }
 #form-contact-info{
@@ -1079,12 +1082,13 @@ text-align: center;
 }
 /***************************Media query*******************************/
 @media only screen and (min-width:991px){
-.navigation-bar{
-      padding: 2rem 0 ;
+#navigation-bar{
+      padding: 2rem 0rem ;
       display:flex;
       justify-content: space-around;
       align-items: center;
       grid-area: nav;
+      transition:0.4s;
       position:fixed;
       top:0px;
       background-color: #fff;
@@ -1150,6 +1154,7 @@ text-align: center;
       margin-left: 0;
     }
     #logo-images{
+      transition:0.4s;
       width:4rem;
       margin-right: 0.5rem;
     }

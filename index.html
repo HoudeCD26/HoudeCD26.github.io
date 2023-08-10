@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+
+
 <html lang="fr-CA">
 <head>
   <meta charset="UTF-8">
-  <title>Jean-Christophe Houde | Québec|Placement Assurance</title>
+  <meta name="description" content="Conseiller en Sécuriter Financière,Placement et Assurance. Des fondations durable, un patrimoine de valeur. Je suis l’architecte de vos aspirations financières.">
+  <title>Jean-Christophe Houde | Conseiller Québec|Placement Assurance</title>
   <link rel="icon" type="image/x-icon" href="./Finance-img/logo-favicon.png">
   <link href="./Resources/css/index.css" type="text/css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,10 +16,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 </head>
 <body>
-
+  <!--Script------------>
+  
   <div class ="main-grid">
 
-    <div class="navigation-bar">
+    <div id="navigation-bar">
       <div id="logo">
           <a id="reference-home" href="index.html">
           <img id="logo-images" src="./Finance-img/logo4.0.png" alt="Logo conseiller financier">
@@ -45,14 +49,7 @@
           </a>
         </div>
       </div>
-   <script>
-    function showMenu(){
-     document.querySelector('.navigation').classList.toggle('active');
-     document.querySelector('.menu').classList.toggle('hide');
-     document.querySelector('.close').classList.toggle('show');
-    } 
- </script>
- 
+  
 
    <div id ="banner">
     <div class="banner-main">
@@ -264,5 +261,26 @@
   </div>
 </footer>
 </div>
+<script>
+  function showMenu(){
+   document.querySelector('.navigation').classList.toggle('active');
+   document.querySelector('.menu').classList.toggle('hide');
+   document.querySelector('.close').classList.toggle('show');
+  } 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+  document.getElementById("logo-images").style.width = "2.8rem";
+  document.getElementById("navigation-bar").style.padding = "0.8rem 0";
+} else{
+  document.getElementById("logo-images").style.width = "4rem";
+  document.getElementById("navigation-bar").style.padding = "2rem 0";
+
+}
+}
+
+</script>
+
 </body>
 </html>
