@@ -301,6 +301,30 @@ background-size:cover;
   box-shadow:  21px 10px 41px #cfcfcf;
   padding: 0.5rem;
 }
+.reveal{
+  position:relative;
+  transform: translatey(150px);
+  opacity:0;
+  transition: all 1s ease;
+
+}
+.reveal.active{
+  transform: translatey(0px);
+  opacity:1;
+
+}
+.reveal-social{
+  position:relative;
+  transform: translatex(150px);
+  opacity:0;
+  transition: all 1s ease;
+
+}
+.reveal-social.active{
+  transform: translatex(0px);
+  opacity:1;
+
+}
 .epargne-logo{
   width:25%;
 }

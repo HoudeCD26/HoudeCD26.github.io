@@ -93,7 +93,7 @@
 
   </div>
 
-  <div id="services-bottom">
+  <div id="services-bottom" class="reveal">
     <div id="services-principale">
      <div class="services">
       <a  href="epargne.html">
@@ -124,7 +124,7 @@
       <div id="soumission-left">
         <div class="soumission-left-text">
         <h1><a href="https://ia.ca/campagne-iaah/reseau-carriere?uid=BAB35C" target="_blank"><span id="economiser">Economiser</span></a> sur vos assurances !</h1>
-        <div class="soumission-images-bar">
+        <div class="soumission-images-bar reveal">
           <a href="https://auto.ia.ca/fr-CA/chat/auto-vip?uid=BAB35C" target="_blank">
           <img src="./Finance-img/protection.png">
           </a>
@@ -172,7 +172,7 @@
       </div>
       </a>
     </div>
-    <div id="question-box-right">
+    <div id="question-box-right" class ="reveal reveal-social">
       <div class="contact-box-area">
       <div id="contact-box-email" class="contact-box">
         <a href="mailto:jean-christophe.houde@agc.ia.ca">
@@ -262,6 +262,25 @@
 </footer>
 </div>
 <script>
+  window.addEventListener('scroll',reveal);
+  function reveal(){
+    var reveals = document.querySelectorAll('.reveal');
+    for (var i=0; i < reveals.length; i++){
+      var windowHeight = window.innerHeight;
+      var revealTop = reveals[i].getBoundingClientRect().top;
+      var revealPoint = 100;
+
+      if(revealTop < windowHeight - revealPoint){
+
+        reveals[i].classList.add('active');
+
+      }else{
+        reveals[i].classList.remove('active');
+
+      }
+    }
+  }
+
   function showMenu(){
    document.querySelector('.navigation').classList.toggle('active');
    document.querySelector('.menu').classList.toggle('hide');
