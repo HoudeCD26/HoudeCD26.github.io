@@ -68,7 +68,7 @@
                 <p>Assurez les paiements hypothécaires de votre maison, protégez vos jeunes enfants de la perte d’un ou des deux parents, couvrir un prêt personnel, et bien plus.</p>
             </ul>
         </div>
-        <div id="assurance-maladie" class="produits-assurance">
+        <div id="assurance-maladie" class="produits-assurance reveal">
                 <ul>
                     <li><strong>Protéger</strong> votre épargne durement gagner contre les évènements incontrôlables tel le diagnostic d’un cancer, l’accident vasculaire cérébral, la crise cardiaque, et bien d’autres. </li>
                     <li>Un montant forfaitaire pour avoir <strong>l’esprit tranquille</strong> sans avoir à puiser dans votre épargne, ce qui nuirait à votre retraite.</li>
@@ -78,16 +78,16 @@
                     <h2>Épargne Santé/ Maladie grave</h2>
                     </div>
         </div>
-        <div id="assurance-invaliditer" class="produits-assurance" >
+        <div id="assurance-invaliditer" class="produits-assurance reveal" >
             <div id ="titre-assurance-invaliditer" class="titre-assurances-box">
                 <h2>Assurance invalidité</h2>
                 </div>
                <span>Un moment difficile n’a pas à être difficile. <strong>Maintenez votre niveau de vie</strong> lorsqu’un accident vous empêche d’exercer vos obligations professionnelles. Couvrez vos dépenses essentielles et continuez de contribuer à la croissance de votre portefeuille de retraite.</span>
         </div>
-        <div id="assurance-auto-hab" class="produits-assurance">
+        <div id="assurance-auto-hab" class="produits-assurance reveal">
           <div class="soumission-assurance">
             <h3><a href="https://ia.ca/campagne-iaah/reseau-carriere?uid=BAB35C" target="_blank"><span id="economiser">Economiser</span></a> sur vos assurances !</h3>
-            <div class="soumission-images-bar">
+            <div id ="soumission-page-assurance" class="soumission-images-bar">
               <a href="https://auto.ia.ca/fr-CA/chat/auto-vip?uid=BAB35C" target="_blank">
               <img src="./Finance-img/protection.png">
               </a>
@@ -234,6 +234,24 @@ if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
 
 }
 }
+window.addEventListener('scroll',reveal);
+  function reveal(){
+    var reveals = document.querySelectorAll('.reveal');
+    for (var i=0; i < reveals.length; i++){
+      var windowHeight = window.innerHeight;
+      var revealTop = reveals[i].getBoundingClientRect().top;
+      var revealPoint = 50;
+
+      if(revealTop < windowHeight - revealPoint){
+
+        reveals[i].classList.add('active');
+
+      }else{
+        reveals[i].classList.remove('active');
+
+      }
+    }
+  }
 
 </script>
 
