@@ -37,8 +37,11 @@ html{
     transform: translateY(0);
   }
 }
-@keyframes appearOnOppen{
+@keyframes appearOnOpen{
   0%{
+    opacity: 0;
+  }
+  50%{
     opacity: 0;
   }
   100%{
@@ -167,14 +170,10 @@ img.close.show{
 img.close{
   display: none;
 }
- #banner{
-  grid-area: banner;
-  /*background: linear-gradient(rgba(246,244,235,1) 0%, rgba(246,244,235,1) 20%, rgba(255,255,255,1) 100%);}
-*/
- }
 /* Code CSS For main Banner */
 .banner-main{
-  margin: 0 7.5%;
+  grid-area: banner;
+  margin: 0rem 7.5%;
   width: 85%;
   height: 100%;
   display:flex;
@@ -195,7 +194,6 @@ background-size:cover;
   background-color: #DFD3C3;
   width:50%;
   height:100%;
-  
 }
 .banner-right-texte{
   width:85%;
@@ -1079,7 +1077,7 @@ gap:1rem;
   padding:1rem;
 }
 #titre-assurance-invaliditer{
-  background-image: url("./images/depositphotos_440325776-stock-photo-concept-of-disability-insurance-with.jpg");
+  background-image: url("./images/invaliditer.jpg");
   background-size: cover;
   height:70%;
   width:95%;
@@ -1193,7 +1191,7 @@ animation: 2s ease-out 0s 1 appearOnOppen;
 /***************************Media query*******************************/
 @media only screen and (min-width:991px){
 #navigation-bar{
-      padding: 2rem 0rem ;
+      padding: 1.2rem 0rem ;
       display:flex;
       justify-content: space-around;
       align-items: center;
@@ -1615,6 +1613,10 @@ height: 40rem;
     padding:0;
     width:10rem;
     text-align: center;
+  }
+  .epargne-grid{
+   
+     grid-template-rows: 15vh 230rem 30rem;                    
   }
   .apropos-grid{
     grid-template-rows: 15vh 80rem 30rem; 
