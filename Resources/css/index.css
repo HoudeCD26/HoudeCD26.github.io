@@ -19,7 +19,7 @@ html{
 
 @keyframes slideInRight {
   0% {
-    transform: translateX(50%);
+    transform: translateX(50% );
     opacity: 0;
   }
   100% {
@@ -291,7 +291,6 @@ background-size:cover;
 #services-top{
   margin: 2rem;
   height: 10%;
-  width:100%;
   display:flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -905,13 +904,13 @@ text-align: right;
 .section-left{
   opacity: 0;
   transition: all 1.5s ease;
-  transform: translatex(-150px);
+  transform: translatex(-2rem);
 
 }
 .section-right{
   opacity: 0;
   transition: all 1.5s ease;
-  transform: translatex(150px);
+  transform: translatex(2rem);
 }
 .section-texte.active .section-left{
   opacity:1;
@@ -1358,6 +1357,18 @@ text-align: center;
   background-size: cover;
   width:50%;
   height:100%;
+}
+
+.section-left{
+  opacity: 0;
+  transition: all 1.5s ease;
+  transform: translatex(-10rem);
+
+}
+.section-right{
+  opacity: 0;
+  transition: all 1.5s ease;
+  transform: translatex(10rem);
 }
 }
 
