@@ -2030,4 +2030,8 @@ height: 40rem;
 .liste-articles{
   background-color: white;
 }
+article{
+  width:80%;
+  padding: 2rem 1rem;
+}
 }
