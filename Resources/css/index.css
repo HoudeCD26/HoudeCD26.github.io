@@ -196,6 +196,8 @@ width: 50%;
 background-image: url("./images/Photo_banner.svg");
 background-position: center;
 background-size: cover;
+animation:  2s ease-out 0s 1 appearOnOpen;
+
 
 /*banner Profile picture section*/
 }
@@ -605,12 +607,13 @@ border-top-width: 0.5rem;
   height: 2px;
   width: 0;
   background-color: #3654ff;
-  transition: .5s ease;
+  transition: .1s ease;
 }
 
 .btn:hover {
-  color: #3654ff;
-  transition-delay: .5s;
+  color: white;
+  transition-delay: .1s;
+  background-color: #3654ff;
 }
 
 .btn:hover::before {

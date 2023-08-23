@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="script.js" defer></script>
 </head>
 
    <body>
@@ -72,7 +73,7 @@
           
         </div>
         <hr>
-        <div  id="image-approche-personalise" class="section-texte">
+        <div  id="image-approche-personalise" class="section-texte reveal">
             <div  class="epargne-images section-left">
               <img  src="./Finance-img/getty_483357882_395955.jpg" alt="plan personnel">
             </div>
@@ -89,7 +90,7 @@
               </div>
         </div>
         
-        <div class="section-texte ">
+        <div class="section-texte reveal">
             <div class="epargne-texte section-left">
                 <h2>Le temps est votre allié</h2>
                 <p>Il n’est jamais trop tôt pour commencer à épargner. Contrairement à l’opinion populaire, repousser l’épargne ne serait-ce que de quelques années peut avoir des impacts de plusieurs dizaines de milliers de dollars au moment de la retraite. Trouvons ensemble l’argent qui dort afin qu’elle commence dès maintenant à travailler pour vous.</p>
@@ -104,7 +105,7 @@
               <img src="./Finance-img/pexels-jeshootscom-714701.jpg" alt="epargne temps">
             </div>
         </div>
-        <div id="image-argent-travail-pour-vous" class="section-texte">
+        <div id="image-argent-travail-pour-vous" class="section-texte reveal">
             <div class="epargne-images section-left">
               <img src="./Finance-img/piggybank-laptop_SOMN19060_1173209057_is_1560x880.jpg" alt="argent travail pour vous">
             </div>
@@ -120,7 +121,7 @@
                   </div>
               </div>
         </div>
-        <div class="section-texte">
+        <div class="section-texte reveal">
             
             <div class="epargne-texte section-left">
                 <h2>Ajustements continus</h2>
@@ -249,45 +250,5 @@
 
 
     </div>
-    <script>
-      function showMenu(){
-       document.querySelector('.navigation').classList.toggle('active');
-       document.querySelector('.menu').classList.toggle('hide');
-       document.querySelector('.close').classList.toggle('show');
-      } 
-    window.onscroll = function() {scrollFunction()};
-    
-    function scrollFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-      document.getElementById("logo-images").style.width = "2.8rem";
-      document.getElementById("navigation-bar").style.padding = "0.8rem 0";
-    } else{
-      document.getElementById("logo-images").style.width = "4rem";
-      document.getElementById("navigation-bar").style.padding = "2rem 0";
-    
-    }
-    }
-    window.addEventListener('scroll',reveal);
-  function reveal(){
-    var reveals = document.querySelectorAll('.section-texte');
-    for (var i=0; i < reveals.length; i++){
-      var windowHeight = window.innerHeight;
-      var revealTop = reveals[i].getBoundingClientRect().top;
-      var revealPoint = 300 ;
-
-      if(revealTop < windowHeight - revealPoint){
-
-        reveals[i].classList.add('active');
-
-      }else{
-        reveals[i].classList.remove('active');
-
-      }
-    }
-  }
-
-    
-    </script>
-    
    </body>
    </html>
