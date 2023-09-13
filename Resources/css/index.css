@@ -400,7 +400,7 @@ animation:  2s ease-out 0s 1 appearOnOpen;
 }
 .soumission-left-text h1{
   margin-top: 0;
-  color:#232655;
+  text-align: center;
   
 }
 #soumission{
@@ -413,6 +413,7 @@ animation:  2s ease-out 0s 1 appearOnOpen;
       z-index:10;
 }
 #soumission-left{
+  
   height: 100%;
   width: 100%;
 }
@@ -1790,7 +1791,6 @@ text-align: center;
      grid-template-columns: 100%;
      grid-template-rows: 15vh 230rem 30rem;                    
   }
-  
   .epargne-images img {
     width: 65%;
 }
@@ -2090,6 +2090,7 @@ height: 40rem;
  }
  #soumission {
   width:80%; 
+  height: 24rem;
   }
   #services-bottom {
     height: 85%;
