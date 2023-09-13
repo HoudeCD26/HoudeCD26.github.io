@@ -3,15 +3,6 @@
 <html lang="fr-CA">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HRHNN0H0HS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HRHNN0H0HS');
-</script>
   <meta charset="UTF-8">
   <title>Contact | Jean-Christophe Houde|Québec</title>
   <link rel="icon" type="image/x-icon" href="./Finance-img/logo-favicon.png">
@@ -19,6 +10,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet"> <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="script.js" defer></script>
+  <script>
+    window.addEventListener("load", function() {
+      const form = document.getElementById('my-form');
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const action = e.target.action;
+        fetch(action, {
+          method: 'POST',
+          body: data,
+        })
+        .then(() => {
+          window.location.href = 'merci.html';
+        })
+      });
+    });
+    </script>
 </head>
 <body>
 <div class="contact-grid">
@@ -59,46 +67,55 @@
 
 <!---------------------CONTACT------------->
 <div id="contact-container">
-  <div id="contact-box-top"> 
-    <h1>Contacter moi pour obtenir un rendez-vous</h1>
-    </div>
 <div id="contact-box">
-    <form lang ="fr" class="form" method="POST" action="https://formsubmit.co/jean-christophe.houde@agc.ia.ca">
-      <input type="hidden" name="_next" value="https://jchoudeconseiller.com/merci.html">
-      <input type="hidden" name="_subject" value="nouvelle demande de contact recu par jchoudeconseiller.com">
-      <div class="group">
-      <input placeholder="" type="text" id="name" name="name" required="" oninvalid="this.setCustomValidity('Entrez une donné valide!')" oninput="setCustomValidity('')">
-      <label for="name">Nom</label>
+  <DIV id="contact-left"></DIV>
+  <form lang ="fr" id ='my-form' class="form" method="POST" action="https://script.google.com/macros/s/AKfycbw1Zq8JOhmMWvXkNU0mkSf_cYnvsINx3IpYA_ToxSB2a2j-9hgbtuWtyUGDLLlBeiO8NQ/exec">
+    <div id="contact-box-top"> 
+      <h1>Recevez plus d'informations</h1>
       </div>
-      <div class="group">
-        <input placeholder="" type="text" id="cell" name="cell" telerequired=""  oninvalid="this.setCustomValidity('Entrez une donné valide!')" oninput="setCustomValidity('')">
-        <label for="cell">Telephone</label>
-        </div>
-  <div class="group">
-      <input placeholder="" type="email" id="email" name="email" required=""  oninvalid="this.setCustomValidity('Entrez une donné valide!')" oninput="setCustomValidity('')">
-      <label for="email">Courriel</label>
+    <div class="group">
+    <input placeholder="" type="text" id="Nom" name="Nom" required="" oninvalid="this.setCustomValidity('Entrez une donné valide!')" oninput="setCustomValidity('')">
+    <label for="Nom">Nom</label>
+    </div>
+    <div class="group">
+      <input placeholder="" type="text" id="Telephone" name="Telephone" telerequired=""  oninvalid="this.setCustomValidity('Entrez une donné valide!')" oninput="setCustomValidity('')">
+      <label for="Telephone">Telephone</label>
       </div>
-  <div class="group">
-      <textarea placeholder="" id="comment" name="comment" rows="5" required=""  oninvalid="this.setCustomValidity('Entrez une donné valide!')" oninput="setCustomValidity('')"></textarea>
-      <label for="comment">Message</label>
-  </div>
-      <button type="submit">Envoyer</button>
-<div id="form-contact-info">
-  <a href="mailto:jean-christophe.houde@agc.ia.ca">
-      <p>jean-christophe.houde@agc.ia.ca</p>
-  </a>
-      <p>(438) 371-8839</p>
-      <br>
-      <a target="_blank" href="https://www.google.com/maps/place/3055+Boulevard+Saint-Martin+O,+Laval,+QC+H7T+3C2/@45.5597411,-73.7461186,17z/data=!4m6!3m5!1s0x4cc923b7c1300baf:0x927e420b7096e944!8m2!3d45.5597411!4d-73.7443591!16s%2Fg%2F11b8v52v8s?entry=ttu">
-      <div id="adresse-contact">
-        <p>Adresse:</p>
-        <p>3055 Boul Saint-Martin O</p>
-        <p>Laval, Québec, Canada</p>
-        <p>H7P 0J3</p>
-        </div>
-      </a>
+<div class="group">
+    <input placeholder="" type="email" id="Email" name="Email" required=""  oninvalid="this.setCustomValidity('Entrez une donné valide!')" oninput="setCustomValidity('')">
+    <label for="Email">Courriel</label>
+    </div>
+    <div class="group">
+      <label for="Service">Services</label>
+      <select id="Service" name="Service"  required=""  oninvalid="this.setCustomValidity('Entrez une donné valide!')" oninput="setCustomValidity('')">
+        <option disabled selected value> -- Faite un choix -- </option>
+        <option value="volvo">Épargne</option>
+        <option value="saab">Assurance Vie</option>
+        <option value="fiat">Assurance Maladie Grave</option>
+        <option value="audi">Assurance Invalidité</option>
+      </select>
+      </div>
+<div class="group">
+    <textarea placeholder="" id="Message" name="Message" rows="5" required=""  oninvalid="this.setCustomValidity('Entrez une donné valide!')" oninput="setCustomValidity('')"></textarea>
+    <label for="Message">Message</label>
 </div>
-    </form>
+    <button type="submit">Envoyer</button>
+<div id="form-contact-info">
+<a href="mailto:jean-christophe.houde@agc.ia.ca">
+    <p>jean-christophe.houde@agc.ia.ca</p>
+</a>
+    <p>(438) 371-8839</p>
+    <br>
+    <a target="_blank" href="https://www.google.com/maps/place/3055+Boulevard+Saint-Martin+O,+Laval,+QC+H7T+3C2/@45.5597411,-73.7461186,17z/data=!4m6!3m5!1s0x4cc923b7c1300baf:0x927e420b7096e944!8m2!3d45.5597411!4d-73.7443591!16s%2Fg%2F11b8v52v8s?entry=ttu">
+    <div id="adresse-contact">
+      <p>Adresse:</p>
+      <p>3055 Boul Saint-Martin O</p>
+      <p>Laval, Québec, Canada</p>
+      <p>H7P 0J3</p>
+      </div>
+    </a>
+</div>
+  </form>
   
 
  </div>

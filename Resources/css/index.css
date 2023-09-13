@@ -193,8 +193,8 @@ img.close{
 #banner-left{
 display:inline-block;
 width: 50%;
-background-image: url("./images/Photo_banner.svg");
-background-position: center;
+background-image: url("./images/EMP_7124.jpg");
+background-position:center;
 background-size: cover;
 animation:  2s ease-out 0s 1 appearOnOpen;
 
@@ -684,19 +684,19 @@ footer{
   width:25%;
 }
 #contact-box-email{
-  background-image: url("./images/pexels-cottonbro-studio-3202235.jpg");
+  background-image: url("./images/EMP_7020.jpg");
   background-size: cover; 
 }
 #contact-box-cell{
-  background-image: url("./images/pexels-andrea-piacquadio-859264.jpg");
+  background-image: url("./images/EMP_6999.jpg");
   background-size: cover;
 }
 #contact-box-facebook{
-  background-image: url("./images/pexels-fauxels-3184465.jpg");
+  background-image: url("./images/EMP_7211.jpg");
   background-size: cover;
 }
 #contact-box-linkedin{
-  background-image: url("./images/pexels-andrea-piacquadio-3760067.jpg");
+  background-image: url("./images/EMP_6959.jpg");
   background-size: cover;
 }
 .contact-box-area{
@@ -871,7 +871,7 @@ footer{
 }
 .choix-services{
   width:40%;
-  height:60%;
+  height:70%;
   box-shadow: 0.6rem 0.6rem 6px #cfcfcf;
   display:flex;
   justify-content: flex-end;
@@ -894,12 +894,14 @@ footer{
 }
 
 #choix-epargne{
-  background-image: url("./images/pexels-joslyn-pickens-3833052.jpg");
+  background-image: url("./images/EMP_7022.jpg");
   background-size: cover;
+  background-position:0 60%;
 }
 #choix-assurances{
-  background-image: url("./images/6291bc4437e08978dc9c0ead_Building\ Insurance.png");
+  background-image: url("./images/EMP_7045.jpg");
   background-size: cover;
+  background-position: 0 65%;
 }
 /**************Contact*************/
 
@@ -912,28 +914,41 @@ footer{
                          "contact"
                          "footer";
    grid-template-columns: 100%;
-   grid-template-rows: 15vh 53rem 30rem;                    
+   grid-template-rows: 15vh 60rem 30rem;                    
 }
 
 #contact-container{
   padding-top: 1rem;
   grid-area: contact;
+  text-align: center;
 }
 #form-contact-info{
   text-align: center;
+  margin: 0 auto ;
   padding-top: 1rem;
 }
 #form-contact-info p {
+  text-align: center;
 margin:0.2rem;
 
 }
 
+#contact-left{
+  width:50%;
+  height: 100%;
+  background-image: url('./images/EMP_6966.jpg');
+  background-size: cover;
+  background-position: bottom;
+
+}
+
 #contact-box{
-  width:90%;
-  height:85%;
-  margin: 0 5%;
+  width:60%;
+  height:50rem;
+ margin: 0 auto;
   display:flex;
   justify-content: center;
+  box-shadow: -0.6rem  0.6rem 1.5rem 6px grey;
  
 
   
@@ -956,12 +971,10 @@ margin:0.2rem;
 }
 .form {
   background-color: #fff;
-  width:40%;
-  height:38rem;
-  margin-top: 0.5rem;
+  width:50%;
+  height:42rem;
   display: flex;
   flex-direction: column;
-  box-shadow: -0.6rem  0.7rem 1.5rem 6px grey;
   padding:2rem 2rem 0 2rem;
 
 }
@@ -974,8 +987,8 @@ color:black;
 
 .group {
   position: relative;
-}
 
+}
 .form .group label {
   font-size: 14px;
   color: rgb(99, 102, 102);
@@ -987,7 +1000,8 @@ color:black;
 }
 
 .form .group input,
-.form .group textarea {
+.form .group textarea,
+.form .group select {
   padding: 0.7rem 0 0.7rem 0.7rem;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -1003,11 +1017,13 @@ color:black;
 }
 
 .form .group input:focus,
-.form .group textarea:focus {
+.form .group textarea:focus,
+.form .group select:focus{
   border-color: #232655;
 }
 
-.form .group input:focus+ label, .form .group textarea:focus +label {
+.form .group input:focus+ label, .form .group textarea:focus +label,
+.form .group select:focus+ label {
   top: -0.7rem;
   left: 0.7rem;
   background-color: #fff;
@@ -1035,6 +1051,13 @@ color:black;
 .form button:hover {
   background-color: #3654ff;
 }
+.form .group textarea{
+  font-family: 'Montserrat',sans-serif; ;
+}
+
+#Service{
+  width:102.5%;
+}
 
 /*****************epargne********************/
 .epargne-grid{
@@ -1051,30 +1074,26 @@ color:black;
 .epargne-container{
   grid-area:epargne;
   width:90%;
-  margin:0 5%;
-  display: flex;
-  flex-direction: column;
+  margin: 0 5%;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: repeat(5,1fr);     
 }
 
-#epargne-titre{
-text-transform: uppercase;
-width:50%;
-background-color: #232655;
-color: white;
-padding:1rem;
-text-align: right;
-}
 .section-texte{
   width:100%;
   height:23rem;
   display:flex;
+  align-items: center;
   margin:2rem 0;
+ 
   
 }
 .epargne-images{
+  height:100%;
   width:50%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 .section-left{
@@ -1102,13 +1121,15 @@ text-align: right;
   transform: translatex(0);
 }
 .first-section{
-  animation: 1s ease-out 0s 1 slideInLeft;
-}
-.sec-section{
   animation: 1s ease-out 0s 1 slideInRight;
 }
+.sec-section{
+  animation: 1s ease-out 0s 1 slideInLeft;
+}
 .epargne-images img{
-  width:70%;
+  max-height:100%;
+  max-width: 80%;
+
 }
 .epargne-texte{
   width:50%;
@@ -1132,14 +1153,27 @@ text-align: right;
 }
 .epargne-slogan{
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
- width:100%;
- height:15rem;
-  background-image: url("./images/epargne-background.png");
+  width:95%;
+  height:100%;
+  background-image: url("./images/EMP_7159.jpg");
   background-size: cover;
+  background-position: 0 35%;
   margin-bottom: 2rem;
 }
+#image-approche-personalise{
+  margin-bottom: 5rem;
+}
+
+#epargne-titre{
+  text-transform: uppercase;
+  width:45%;
+  background-color: #232655;
+  color: white;
+  padding:1rem;
+  text-align: left;
+  }
 
 /********************Assurances****************/
 .assurance-grid{
@@ -1302,17 +1336,20 @@ gap:1rem;
 #main-apropos{
   display: flex;
   grid-area: apropos;
-  align-items: center;
+  align-items: flex-start;
   width:90%;
-  margin:0 5%;
+  margin:2rem 5%;
  
 }
 #image-apropos{
+  height:80%;
   width:40%;
+  background-image: url('./images/EMP_7303.jpg');
+  background-size: cover;
+  background-position: center;
+  float:left;
 }
-#image-apropos img{
-  width:18rem
-}
+
 #texte-apropos{
   margin-left: 1rem;
   width:70%;
@@ -1362,7 +1399,10 @@ animation: 2s ease-out 0s 1 appearOnOppen;
   width:5rem;
 }
 #message-remerciment{
-   text-align: center;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
   height:20rem;
   width:30rem;
   box-shadow: -0.5rem 0.5rem 16px grey;
@@ -1712,10 +1752,14 @@ justify-content: space-around;
 align-items: center;
 text-align: center;
 }
+.soumission-left-text h1{
+  text-align: center;
+}
 
 #soumission-right{
-  background-image: url("./images/pexels-lisa-fotios-1666467.jpg");
+  background-image: url("./images/EMP_7112.jpg");
   background-size: cover;
+  background-position: 0 70%;
   width:50%;
   height:100%;
 }
@@ -1731,9 +1775,64 @@ text-align: center;
   transition: all 1.5s ease;
   transform: translatex(10rem);
 }
-}
 
+
+}
+@media only screen and (max-width:990px){
+  .epargne-grid{
+    display:grid;
+    width:100%;
+      position: relative;
+      margin: auto;
+      grid-template-areas: "nav"
+                           "epargne"
+                           "footer";
+     grid-template-columns: 100%;
+     grid-template-rows: 15vh 230rem 30rem;                    
+  }
+  
+  .epargne-images img {
+    width: 65%;
+}
+  .section-texte{
+    flex-direction: column;
+    align-items: center;
+    height: 40rem;
+  }
+  .epargne-texte{
+    width:100%;
+    height:50%;
+    padding: 2rem 0;
+  }
+  .epargne-images{
+    
+    width:95%;
+    DISPLAY: FLEX;
+    align-items: CENTER;
+    object-fit: cover;
+    object-position: bottom;
+  }
+  #image-approche-personalise {
+    padding-top: 3rem;
+}
+  #image-approche-personalise,#image-argent-travail-pour-vous{
+    flex-direction: column-reverse;
+  }
+  
+#contact-left{
+ display: none;
+}
+ #my-form{
+  width:100%;
+  height:98%;
+ }
+ #contact-box{
+  height: 90%;
+  
+ }
+}
 @media only screen and (max-width:768px){
+  
   nav.navigation.active{
     display:flex;
     flex-direction: column;
@@ -1773,9 +1872,9 @@ text-align: center;
   }
   #banner-left{
     width: 100%;
-    height:40%;
+    height:35%;
     background-size:cover;
-    background-position:0 30%;
+    background-position: 0 65%;
       
   }
   #banner-right{
@@ -1851,36 +1950,8 @@ font-size: 0.6rem;
   width:15rem;
   height: 10rem;
 }
-/************************epargne*********************/
-.epargne-grid{
-  display:grid;
-  width:100%;
-    position: relative;
-    margin: auto;
-    grid-template-areas: "nav"
-                         "epargne"
-                         "footer";
-   grid-template-columns: 100%;
-   grid-template-rows: 15vh 220rem 30rem;                    
-}
-.section-texte{
-  flex-direction: column;
-  align-items: center;
-  height: 40rem;
-}
-.epargne-texte{
-  width:100%;
-  height:50%;
-  padding-bottom: 2rem;
-}
-.epargne-images{
-  width:100%;
-  height:50%;
-}
+/************************assurance*********************/
 
-#image-approche-personalise,#image-argent-travail-pour-vous{
-  flex-direction: column-reverse;
-}
 .assurance-grid{
   display:grid;
   width:100%;
@@ -1932,18 +2003,23 @@ font-size: 0.6rem;
   flex-direction: column;
 }
 #texte-apropos {
-  width: 90%;
+  width: 100%;
   text-align: justify;
+  margin:0;
 }
 #texte-apropos h1 {
   text-align: center;
   margin-top: 2rem;
 }
 #image-apropos {
-  width: 80%;
-  text-align: center;
-}.grid-services{
-grid-template-rows: 15vh 40rem 30rem;
+  width: 100%;
+height: 30%;
+  background-image: url('./images/EMP_7303.jpg');
+  background-size: cover;
+  background-position: 0 30%;
+}
+.grid-services{
+grid-template-rows: 15vh 60rem 30rem;
 }
 #choix-services-box {
   margin-top: 2rem;
@@ -1956,16 +2032,10 @@ flex-direction: column;
 .choix-services a {
   width: 50%;
 }
+#choix-epargne{
+  background-position: 0 30%;
+}
 
-.contact-grid{
-   grid-template-rows: 15vh 50rem 30rem;                    
-}
-#contact-box-top {
-height:7rem;
-}
-#contact-box-top h1 {
-font-size: 1.5rem;
-}
 #form-contact-info {
   padding-top: 3rem;
 }
@@ -2000,10 +2070,10 @@ height: 40rem;
   }
   .apropos-grid{
     grid-template-rows: 15vh 80rem 30rem; 
-  }  
-  .contact-grid{
-    grid-template-rows: 15vh 55rem 30rem;                    
- }
+  } 
+ .epargne-texte {
+  padding:0;
+}
  
 }
 @media only screen and (max-width:452px){
