@@ -89,11 +89,10 @@
       <label for="Service">Services</label>
       <select id="Service" name="Service"  required=""  oninvalid="this.setCustomValidity('Entrez une donné valide!')" oninput="setCustomValidity('')">
         <option disabled selected value> -- Faite un choix -- </option>
-        <option value="Épargne">Épargne</option>
-        <option value="Assurance Vie">Assurance Vie</option>
-        <option value="Assurance Maladie Grave">Assurance Maladie Grave</option>
-        <option value="Assurance Invalidite">Assurance Invalidité</option>
-        <option value="Entrepreneur/Travailleur Autonome">Entrepreneur / Travailleur Autonome</option>
+        <option value="volvo">Épargne</option>
+        <option value="saab">Assurance Vie</option>
+        <option value="fiat">Assurance Maladie Grave</option>
+        <option value="audi">Assurance Invalidité</option>
       </select>
       </div>
 <div class="group">
@@ -233,6 +232,17 @@
 
 
 </div>
-
+<!-- Ce site fait confiance à Leadfox pour convertir ses visiteurs en clients - https://leadfox.co/fr/ -->
+<script>
+  (function() {
+  var el = document.createElement("script");
+  el.setAttribute("defer", "");
+  el.setAttribute("src", "//app.leadfox.co/js/api/leadfox.js");
+  el.setAttribute("data-key", "9018b3c48893f61ae3c91f252a53ecb6");
+  
+  document.head.appendChild(el);
+  })();
+  </script>
+  <!-- Leadfox -->
 </body>
 </html>
