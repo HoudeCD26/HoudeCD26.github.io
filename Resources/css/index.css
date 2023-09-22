@@ -214,7 +214,7 @@ animation:  2s ease-out 0s 1 appearOnOpen;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 .banner-slogan{
  margin:0 0 1rem 0;
@@ -225,7 +225,7 @@ animation:  2s ease-out 0s 1 appearOnOpen;
 
 }
 .banner-description{
- margin: 0.2rem 1rem 0.2rem 1rem;
+ margin: 0.2rem 0;
  height:fit-content;
  text-align:justify;
  line-height: 1.6;
@@ -237,7 +237,7 @@ animation:  2s ease-out 0s 1 appearOnOpen;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 #button-banner-2{
   margin-top:1rem;
@@ -1839,6 +1839,42 @@ text-align: center;
   height: 90%;
   
  }
+ 
+ .banner-main{
+  flex-direction: column;
+}
+#banner-left{
+  width: 100%;
+  height:35%;
+  background-size:cover;
+  background-position: 0 65%;
+flex:0.8
+    
+}
+#banner-right{
+  width: 100%;
+  height:50%;
+  order:1;
+  
+}
+.banner-right-texte{
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.main-grid{
+  display: grid;
+  width:100%;
+    position: relative;
+    margin: auto;
+    grid-template-areas: "nav"
+                         "banner"
+                         "services"
+                         "articles"
+                         "footer";
+   grid-template-columns: 100%;
+   grid-template-rows: 15vh 60rem 70rem 40rem 45rem;                    
+}
 }
 @media only screen and (max-width:768px){
   
@@ -1855,19 +1891,6 @@ text-align: center;
     align-items: center;
     
   }
-  .main-grid{
-    display: grid;
-    width:100%;
-      position: relative;
-      margin: auto;
-      grid-template-areas: "nav"
-                           "banner"
-                           "services"
-                           "articles"
-                           "footer";
-     grid-template-columns: 100%;
-     grid-template-rows: 15vh 60rem 70rem 40rem 45rem;                    
-  }
   .articles-carousel{
     width: 30.5rem;
     grid-auto-columns: 14.5rem;
@@ -1876,23 +1899,6 @@ text-align: center;
     height:22rem;
   }
   
-    .banner-main{
-    flex-direction: column;
-  }
-  #banner-left{
-    width: 100%;
-    height:35%;
-    background-size:cover;
-    background-position: 0 65%;
-      
-  }
-  #banner-right{
-    width: 100%;
-    height:50%
-  }
-  .banner-right-texte{
-    align-items: center;
-  }
   /*************Services*****************************/
   .services{
     width:15rem;
