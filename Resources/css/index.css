@@ -192,7 +192,7 @@ img.close{
 /*left side of the banner */
 #banner-left{
 display:inline-block;
-width: 50%;
+flex:1;
 background-image: url("./images/EMP_7124.jpg");
 background-position:center;
 background-size: cover;
@@ -204,7 +204,7 @@ animation:  2s ease-out 0s 1 appearOnOpen;
 /* Right side of the Banner*/
 #banner-right{
   background-color: #DFD3C3;
-  width:50%;
+  flex:1;
   height:100%;
 }
 .banner-right-texte{
@@ -347,8 +347,17 @@ animation:  2s ease-out 0s 1 appearOnOpen;
   justify-content: center;
   align-items: center;
   text-align: center;
-  box-shadow:  21px 10px 41px #cfcfcf;
+  box-shadow:  12px 10px 20px #cfcfcf;
   padding: 0.5rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.services:hover{
+  transform: scale(1.05);
+  box-shadow:  7px 4px 10px #cfcfcf;
+}
+.services:hover h2{
+  color:#3654ff;
 }
 .reveal{
   position:relative;
